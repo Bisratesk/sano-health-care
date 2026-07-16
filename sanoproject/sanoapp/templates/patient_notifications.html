@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SANO Notifications</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI",Arial,sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#eef7ff,#f8fbff);
+min-height:100vh;
+padding:50px 20px;
+
+}
+
+.container{
+
+max-width:900px;
+margin:auto;
+
+}
+
+.header{
+
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+margin-bottom:30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+
+}
+
+.header h1{
+
+color:#0b5ed7;
+font-size:34px;
+font-weight:700;
+
+}
+
+.header p{
+
+color:#666;
+margin-top:8px;
+font-size:15px;
+
+}
+
+.count{
+
+background:#0b5ed7;
+color:white;
+padding:10px 18px;
+border-radius:30px;
+font-size:15px;
+font-weight:600;
+
+}
+
+.notification{
+
+background:white;
+border-left:6px solid #0b5ed7;
+padding:22px;
+margin-bottom:18px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
+
+}
+
+.notification:hover{
+
+transform:translateY(-5px);
+box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+}
+
+.notification-header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:12px;
+
+}
+
+.icon{
+
+width:50px;
+height:50px;
+border-radius:50%;
+background:#e7f1ff;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:22px;
+
+}
+
+.title{
+
+font-size:19px;
+font-weight:600;
+color:#023e8a;
+
+}
+
+.message{
+
+margin-top:10px;
+font-size:16px;
+color:#444;
+line-height:1.7;
+
+}
+
+.date{
+
+margin-top:18px;
+font-size:13px;
+color:#888;
+
+}
+
+.empty{
+
+text-align:center;
+padding:60px 20px;
+background:white;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.empty-icon{
+
+font-size:60px;
+margin-bottom:15px;
+
+}
+
+.empty h2{
+
+color:#023e8a;
+margin-bottom:10px;
+
+}
+
+.empty p{
+
+color:#777;
+
+}
+.home-btn{
+
+display:inline-block;
+margin-top:18px;
+padding:12px 22px;
+background:#0b5ed7;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:600;
+transition:.3s;
+
+}
+
+.home-btn:hover{
+
+background:#084db3;
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(11,94,215,.25);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<div>
+
+<h1>🔔 Notifications</h1>
+
+<p>Stay updated with your latest appointment activities.</p>
+
+</div>
+
+<div class="count">
+
+{{ notifications|length }} Notifications
+
+</div>
+
+</div>
+
+{% for n in notifications %}
+
+<div class="notification">
+
+<div class="notification-header">
+
+<div class="icon">
+🏥
+</div>
+
+<div class="title">
+SANO Health Care
+</div>
+
+</div>
+
+<div class="message">
+
+{{ n.message }}
+
+</div>
+
+<div class="date">
+
+📅 {{ n.created_at }}
+
+</div>
+
+</div>
+
+{% empty %}
+
+<div class="empty">
+
+<div class="empty-icon">
+🔔
+</div>
+
+<h2>No Notifications</h2>
+
+<p>You don't have any notifications at the moment.</p>
+
+</div>
+
+{% endfor %}
+<a href="{% url 'patient_home' %}" class="home-btn">
+    ← Back to Home
+</a>
+</div>
+
+</body>
+
+</html>

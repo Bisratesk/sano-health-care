@@ -1,0 +1,2131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SANO Health Care</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Arial, sans-serif;
+}
+
+body{
+    background:#f8fcff;
+    color:#333;
+}
+
+
+/* ================= HEADER ================= */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 8%;
+
+    background:white;
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+.btn{
+
+    display:inline-block;
+    padding:10px 22px;
+    margin-left:15px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+
+.login-btn{
+
+    color:#0077b6;
+    border:2px solid #0077b6;
+
+}
+
+
+.login-btn:hover{
+
+    background:#0077b6;
+    color:white;
+
+}
+
+
+
+.register-btn{
+
+    background:#0077b6;
+    color:white;
+    border:2px solid #0077b6;
+
+}
+
+
+.register-btn:hover{
+
+    background:#023e8a;
+
+}
+
+
+
+.logout-btn{
+
+    background:#dc3545;
+    color:white;
+    border:2px solid #dc3545;
+
+}
+
+
+.logout-btn:hover{
+
+    background:#b02a37;
+
+}
+
+
+.logo{
+    font-size:30px;
+    font-weight:800;
+    color:#0077b6;
+}
+
+
+nav a{
+
+    text-decoration:none;
+    color:#333;
+
+    margin-left:30px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+nav a:hover{
+    color:#0077b6;
+}
+
+
+
+/* ================= HERO ================= */
+
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:70px 8%;
+
+    overflow:hidden;
+
+    position:relative;
+
+
+    background:
+    linear-gradient(
+        120deg,
+        #e7f8ff,
+        #ffffff,
+        #d8f3ff
+    );
+
+
+    background-size:300% 300%;
+
+    animation:moveBackground 12s infinite;
+
+}
+
+
+
+@keyframes moveBackground{
+
+    50%{
+        background-position:100% 50%;
+    }
+
+}
+
+
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    background:#90e0ef;
+
+    border-radius:50%;
+
+    right:-120px;
+
+    top:-100px;
+
+    opacity:.25;
+
+    animation:float 8s infinite;
+
+}
+
+
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    background:#48cae4;
+
+    border-radius:50%;
+
+    left:-100px;
+
+    bottom:-100px;
+
+    opacity:.2;
+
+    animation:float 10s infinite reverse;
+
+}
+
+
+
+@keyframes float{
+
+    50%{
+        transform:translateY(40px);
+    }
+
+}
+
+
+
+.hero-text{
+
+    width:50%;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+.hero h1{
+
+    font-size:58px;
+
+    color:#023e8a;
+
+    line-height:1.15;
+
+}
+
+
+
+.hero p{
+
+    margin:25px 0;
+
+    font-size:19px;
+
+    line-height:1.8;
+
+}
+
+
+
+.hero button{
+
+    padding:16px 35px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#0077b6;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.hero button:hover{
+
+    background:#023e8a;
+
+}
+
+
+
+.hero img{
+
+    width:430px;
+
+    border-radius:30px;
+
+    position:relative;
+
+    z-index:2;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.15);
+
+}
+
+
+
+
+
+/* ================= SERVICES ================= */
+
+.services{
+    padding:80px 8% 180px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+
+.section-title{
+
+    font-size:40px;
+
+    color:#023e8a;
+
+    margin-bottom:45px;
+
+}
+
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+
+    margin-top:60px;
+    margin-bottom:-110px;
+
+    position:relative;
+    z-index:10;
+}
+
+.flip-card{
+    width:270px;
+    height:230px;
+    perspective:1200px;
+    position:relative;
+    z-index:1;
+    transition:.4s;
+}
+
+.flip-card:hover{
+    z-index:999;
+    transform:translateY(-18px) scale(1.05);
+}
+
+.flip-inner{
+    width:100%;
+    height:100%;
+    position:relative;
+    transform-style:preserve-3d;
+    transition:transform .8s;
+}
+
+
+
+.flip-card:hover .flip-inner{
+
+    transform:rotateY(180deg);
+
+}
+
+
+
+.flip-front,
+.flip-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:20px;
+    padding:28px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    backface-visibility:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+
+.flip-front::before{
+
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:rgba(255,255,255,.12);
+    top:-80px;
+    right:-60px;
+
+}
+
+.flip-front::after{
+
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    bottom:-60px;
+    left:-40px;
+
+}
+
+.flip-card:hover .flip-front{
+
+    transform:scale(1.03);
+
+}
+.consultation{
+
+    background:linear-gradient(135deg,#0077b6,#00b4d8);
+
+}
+
+.checkup{
+
+    background:linear-gradient(135deg,#2a9d8f,#52b788);
+
+}
+.homecare{
+    background:linear-gradient(135deg,#4361ee,#3a86ff);
+}
+
+.tube{
+    background:linear-gradient(135deg,#2a9d8f,#52b788);
+}
+
+.wound{
+    background:linear-gradient(135deg,#e76f51,#f4a261);
+}
+
+.chronic{
+    background:linear-gradient(135deg,#7209b7,#9d4edd);
+}
+.icon{
+
+    width:75px;
+    height:75px;
+
+    background:rgba(255,255,255,.18);
+
+    border:2px solid rgba(255,255,255,.25);
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:38px;
+
+    backdrop-filter:blur(5px);
+
+}
+.flip-front h3{
+
+    font-size:28px;
+    font-weight:700;
+    margin:0;
+
+}
+
+.flip-front p{
+
+    font-size:16px;
+    opacity:.9;
+    letter-spacing:.5px;
+
+}
+
+
+
+.flip-back{
+    background:white;
+    color:#555;
+    transform:rotateY(180deg);
+    border-top:6px solid #00b4d8;
+    line-height:1.7;
+    font-size:15px;
+}
+/* ================= ABOUT ================= */
+.about{
+
+    background:#ffffff;
+
+    padding:170px 8% 90px;
+
+}
+.about-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:70px;
+
+    flex-wrap:wrap;
+
+}
+
+.about-text{
+
+    flex:1;
+
+}
+
+.about-tag{
+
+    color:#00b4d8;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    font-size:15px;
+
+}
+
+.about h2{
+
+    font-size:52px;
+
+    margin:15px 0;
+
+    color:#023e8a;
+
+}
+
+.about h2 span{
+
+    color:#00b4d8;
+
+}
+
+.line{
+
+    width:120px;
+
+    height:5px;
+
+    background:#00b4d8;
+
+    border-radius:30px;
+
+    margin:25px 0;
+
+}
+
+.about p{
+
+    color:#555;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.feature{
+
+    background:white;
+
+    padding:18px 20px;
+
+    border-radius:15px;
+
+    font-weight:600;
+
+    color:#023e8a;
+
+    border:2px solid #e8f5fb;
+
+    transition:.3s;
+
+}
+
+.feature:hover{
+
+    background:#0077b6;
+
+    color:white;
+
+    transform:translateY(-6px);
+
+}
+
+.about-image{
+
+    flex:1;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:25px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+}
+.about h2{
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+}
+
+
+.about p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+.appointment-btn{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:15px 35px;
+
+    background:#00b4d8;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    box-shadow:0 10px 25px rgba(0,180,216,.3);
+
+    transition:.3s;
+
+}
+
+
+.appointment-btn:hover{
+
+    background:#0077b6;
+
+    transform:translateY(-5px);
+
+}
+
+/* ================= CONTACT ================= */
+
+
+.contact{
+
+    padding:50px 8%;
+
+    background:#f4faff;
+
+    text-align:center;
+
+}
+
+
+
+.contact .section-title{
+
+    margin-bottom:15px;
+
+}
+
+
+
+.contact-subtitle{
+
+    color:#555;
+
+    font-size:18px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.contact-container{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.company-card{
+
+    width:900px;
+    
+    max-width: 100%;
+
+    background:white;
+
+     padding:30px 40px;
+
+    border-radius:25px;
+
+    text-align:left;
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+
+
+.company-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.company-card h3{
+
+    color:#0077b6;
+
+    font-size:32px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.company-card p{
+
+    line-height:1.8;
+
+    margin-bottom:12px;
+
+}
+.contact-info{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px 50px;
+    margin-top:25px;
+}
+
+
+.label{
+
+    color:#023e8a;
+
+    font-weight:700;
+
+}
+
+
+
+/* ================= FOOTER ================= */
+
+
+footer{
+
+    background:#001d3d;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    font-size:15px;
+
+}
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+}
+
+footer{
+    margin-bottom:0;
+}
+
+html,
+body{
+    overflow-x:hidden;
+}
+footer{
+    margin:0;
+}
+/* ================= MEDICAL ANIMATION ================= */
+
+.medical-animation{
+
+    width:430px;
+    height:430px;
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+/* Main medical circle */
+
+.doctor-circle{
+
+    width:280px;
+    height:280px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(135deg,#0077b6,#00b4d8);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:120px;
+
+    box-shadow:
+    0 30px 60px rgba(0,119,182,.35);
+
+    animation:
+    heartbeat 3s infinite;
+
+}
+
+
+/* Heart beat animation */
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+
+}
+
+
+
+/* ECG line */
+
+.pulse-line{
+
+    position:absolute;
+
+    bottom:70px;
+
+    color:white;
+
+    font-size:20px;
+
+    background:#023e8a;
+
+    padding:12px 20px;
+
+    border-radius:30px;
+
+    animation:
+    pulseMove 2s infinite;
+
+}
+
+
+@keyframes pulseMove{
+
+    50%{
+
+        transform:translateX(15px);
+
+    }
+
+}
+
+
+
+/* Floating medical cards */
+
+.floating-card{
+
+    position:absolute;
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:20px;
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:35px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.15);
+
+}
+
+
+.card1{
+
+    top:40px;
+    right:40px;
+
+    animation:float 4s infinite;
+
+}
+
+
+.card2{
+
+    bottom:90px;
+    left:40px;
+
+    animation:float 5s infinite reverse;
+
+}
+
+
+.card3{
+
+    top:180px;
+    right:-10px;
+
+    animation:float 6s infinite;
+
+}
+
+
+
+@keyframes float{
+
+    50%{
+
+        transform:translateY(-25px);
+
+    }
+
+}
+/* ================= STATS ================= */
+
+.stats{
+
+    position:relative;
+
+    padding:110px 8%;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background:linear-gradient(180deg,#ffffff,#eef9ff);
+
+}
+
+.stats-bg{
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    background:#90e0ef;
+
+    border-radius:50%;
+
+    left:-180px;
+    top:-150px;
+
+    opacity:.15;
+
+    animation:blobMove 12s ease-in-out infinite;
+
+}
+
+.stats::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    background:#48cae4;
+
+    border-radius:50%;
+
+    right:-180px;
+    bottom:-150px;
+
+    opacity:.12;
+
+    animation:blobMove 15s ease-in-out infinite reverse;
+
+}
+
+@keyframes blobMove{
+
+    50%{
+        transform:translateY(40px) scale(1.08);
+    }
+
+}
+
+.stats h2{
+
+    font-size:42px;
+
+    color:#023e8a;
+
+    margin-bottom:18px;
+
+    position:relative;
+
+}
+
+.stats-subtitle{
+
+    max-width:720px;
+
+    margin:0 auto 70px;
+
+    color:#666;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    position:relative;
+
+}
+
+.stats-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+    position:relative;
+
+}
+
+.stat-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:40px 25px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+
+    transition:.45s;
+
+    animation:floatCard 5s ease-in-out infinite;
+
+}
+
+.stat-card:nth-child(2){
+
+    animation-delay:.4s;
+
+}
+
+.stat-card:nth-child(3){
+
+    animation-delay:.8s;
+
+}
+
+.stat-card:nth-child(4){
+
+    animation-delay:1.2s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-15px) scale(1.05);
+
+    box-shadow:0 25px 50px rgba(0,119,182,.18);
+
+}
+
+.stat-icon{
+
+    font-size:50px;
+
+    margin-bottom:18px;
+
+}
+
+.stat-card h3{
+
+    font-size:48px;
+
+    color:#0077b6;
+
+    margin-bottom:10px;
+
+}
+
+.stat-card span{
+
+    font-size:18px;
+
+    color:#555;
+
+    font-weight:600;
+
+}
+
+@keyframes floatCard{
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+.heartbeat{
+
+    margin-top:70px;
+
+    font-size:28px;
+
+    color:#0077b6;
+
+    letter-spacing:3px;
+
+    animation:heartbeatLine 2.5s infinite;
+
+}
+
+@keyframes heartbeatLine{
+
+    50%{
+        transform:scale(1.03);
+    }
+
+}
+/* ================= ECG HEARTBEAT ================= */
+
+.ecg-animation{
+
+    margin:90px auto 20px;
+
+    width:90%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:30px;
+
+    overflow:hidden;
+
+}
+
+
+.heart-icon{
+
+    font-size:55px;
+
+    animation:heartBeat 1s infinite;
+
+}
+
+
+@keyframes heartBeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    30%{
+        transform:scale(1.35);
+    }
+
+    50%{
+        transform:scale(.95);
+    }
+
+}
+
+
+
+.ecg-line{
+
+    width:65%;
+
+    overflow:hidden;
+
+}
+
+
+
+.ecg-line svg{
+
+    width:200%;
+
+    height:120px;
+
+    animation:moveECG 4s linear infinite;
+
+}
+
+
+
+.ecg-line path{
+
+    fill:none;
+
+    stroke:#0077b6;
+
+    stroke-width:6;
+
+    stroke-linecap:round;
+
+    stroke-linejoin:round;
+
+    stroke-dasharray:1200;
+
+    stroke-dashoffset:1200;
+
+    animation:drawECG 3s linear infinite;
+
+}
+
+
+
+@keyframes drawECG{
+
+    from{
+        stroke-dashoffset:1200;
+    }
+
+    to{
+        stroke-dashoffset:0;
+    }
+
+}
+
+
+
+@keyframes moveECG{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}
+/* ================= RESPONSIVE ================= */
+
+
+@media(max-width:900px){
+
+
+header{
+
+    flex-direction:column;
+
+}
+
+
+nav{
+
+    margin-top:15px;
+
+}
+
+
+
+.hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+
+
+.hero-text{
+
+    width:100%;
+
+}
+
+
+
+.medical-animation{
+
+    width:90%;
+
+    max-width:430px;
+
+}
+.about-content{
+    flex-direction:column;
+}
+
+.features{
+    grid-template-columns:1fr;
+}
+
+.about h2{
+    font-size:38px;
+}
+
+.about-text{
+    text-align:center;
+}
+
+.line{
+    margin:25px auto;
+}
+
+.about-image img{
+    margin-top:40px;
+}
+.ecg-wrapper{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:20px;
+
+    margin:70px auto;
+
+    width:90%;
+
+}
+
+.ecg-track{
+
+    flex:1;
+    height:120px;
+
+    overflow:hidden;
+
+}
+
+.ecg-track svg{
+
+    width:200%;
+    height:100%;
+
+    animation:moveECG 6s linear infinite;
+
+}
+
+.ecg-track path{
+
+    fill:none;
+
+    stroke:#0077b6;
+
+    stroke-width:5;
+
+    stroke-linecap:round;
+
+    stroke-linejoin:round;
+
+    stroke-dasharray:1800;
+
+    stroke-dashoffset:1800;
+
+    animation:
+        drawLine 2.2s linear infinite,
+        glow 2s ease-in-out infinite;
+
+}
+/* ================= ECG HEARTBEAT ================= */
+
+.ecg-animation{
+
+    width:90%;
+    margin:80px auto 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:25px;
+
+    overflow:hidden;
+
+}
+
+
+.heart-icon{
+
+    font-size:55px;
+
+    animation:heartBeat 1s infinite;
+
+}
+
+
+
+@keyframes heartBeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    30%{
+        transform:scale(1.35);
+    }
+
+    50%{
+        transform:scale(.95);
+    }
+
+}
+
+
+
+.ecg-line{
+
+    width:70%;
+
+    overflow:hidden;
+
+}
+
+
+
+.ecg-line svg{
+
+    width:200%;
+
+    height:120px;
+
+    animation:moveECG 4s linear infinite;
+
+}
+
+
+
+.ecg-line path{
+
+    fill:none;
+
+    stroke:#0077b6;
+
+    stroke-width:6;
+
+    stroke-linecap:round;
+
+    stroke-linejoin:round;
+
+    stroke-dasharray:1200;
+
+    stroke-dashoffset:1200;
+
+    animation:drawECG 3s linear infinite;
+
+}
+
+
+
+@keyframes drawECG{
+
+    from{
+
+        stroke-dashoffset:1200;
+
+    }
+
+    to{
+
+        stroke-dashoffset:0;
+
+    }
+
+}
+
+
+
+@keyframes moveECG{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+.heart{
+
+    font-size:46px;
+
+    animation:beat .9s infinite;
+
+}
+
+@keyframes moveECG{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}
+
+@keyframes drawLine{
+
+    from{
+        stroke-dashoffset:1800;
+    }
+
+    to{
+        stroke-dashoffset:0;
+    }
+
+}
+
+@keyframes glow{
+
+    50%{
+
+        filter:drop-shadow(0 0 12px #00b4d8);
+
+    }
+
+}
+
+@keyframes beat{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    40%{
+
+        transform:scale(1.35);
+
+    }
+
+    60%{
+
+        transform:scale(.95);
+
+    }
+
+}
+
+
+}
+</style>
+</head>
+
+<body>
+
+
+<header>
+
+<div class="logo">
+SANO Health Care
+</div>
+
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+{% if user.is_authenticated %}
+
+    <a href="{% url 'logout' %}" class="btn logout-btn">
+        Logout
+    </a>
+
+{% else %}
+
+    <a href="{% url 'login' %}" class="btn login-btn">
+        Login
+    </a>
+
+    <a href="{% url 'register' %}" class="btn register-btn">
+        Register
+    </a>
+
+{% endif %}
+
+</nav>
+
+</header>
+
+
+
+
+<section id="home" class="hero">
+
+
+<div class="hero-text">
+
+
+<h1>
+Your Health, Our Priority
+</h1>
+
+
+<p>
+SANO Health Care provides trusted medical consultation,
+professional healthcare services, and patient-centered treatment
+with modern healthcare solutions.
+</p>
+
+
+{% if user.is_authenticated %}
+
+<a href="{% url 'appointment' %}" class="appointment-btn">
+    📅 Book Appointment
+</a>
+
+{% else %}
+
+<a href="{% url 'login' %}" class="appointment-btn">
+    📅 Book Appointment
+</a>
+
+{% endif %}
+
+</div>
+
+
+
+<img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c">
+
+
+</section>
+
+
+
+
+<section id="services" class="services">
+
+<h2 class="section-title">
+    Our Medical Services
+</h2>
+
+<div class="cards">
+
+    <!-- Senior Home Care -->
+    <div class="flip-card">
+        <div class="flip-inner">
+
+            <div class="flip-front homecare">
+                <div class="icon">🏡</div>
+                <h3>Senior Home Care</h3>
+                <p>Compassionate Support</p>
+            </div>
+
+            <div class="flip-back">
+                <p>
+                    Personalized in-home care for elderly patients, providing
+                    assistance with daily living, medication reminders,
+                    mobility support and compassionate healthcare in the comfort of home.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Medical Consultation -->
+    <div class="flip-card">
+        <div class="flip-inner">
+
+            <div class="flip-front consultation">
+                <div class="icon">🩺</div>
+                <h3>Medical Consultation</h3>
+                <p>Professional Guidance</p>
+            </div>
+
+            <div class="flip-back">
+                <p>
+                    Comprehensive medical consultation, diagnosis,
+                    treatment planning and personalized healthcare advice
+                    from qualified healthcare professionals.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Tube Change -->
+    <div class="flip-card">
+        <div class="flip-inner">
+
+            <div class="flip-front tube">
+                <div class="icon">💉</div>
+                <h3>Tube Change</h3>
+                <p>NGT & Catheter Care</p>
+            </div>
+
+            <div class="flip-back">
+                <p>
+                    Safe replacement and maintenance of Nasogastric Tubes
+                    (NGT) and urinary catheters while ensuring patient comfort
+                    and infection prevention.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Wound Care -->
+    <div class="flip-card">
+        <div class="flip-inner">
+
+            <div class="flip-front wound">
+                <div class="icon">🩹</div>
+                <h3>Wound Care</h3>
+                <p>Professional Dressing</p>
+            </div>
+
+            <div class="flip-back">
+                <p>
+                    Expert wound assessment, cleaning, dressing changes
+                    and continuous monitoring for faster healing.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Chronic Follow Up -->
+    <div class="flip-card">
+        <div class="flip-inner">
+
+            <div class="flip-front chronic">
+                <div class="icon">📋</div>
+                <h3>Chronic Follow Up</h3>
+                <p>Continuous Care</p>
+            </div>
+
+            <div class="flip-back">
+                <p>
+                    Ongoing follow-up for diabetes, hypertension,
+                    asthma and other chronic illnesses to ensure
+                    better long-term health.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+    <div class="stats-bg"></div>
+
+    <h2>Trusted Healthcare You Can Count On</h2>
+
+    <p class="stats-subtitle">
+        Compassionate medical care delivered with professionalism,
+        reliability, and a commitment to your well-being.
+    </p>
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <div class="stat-icon">❤️</div>
+            <h3 class="counter" data-target="500">0</h3>
+            <span>Patients Served</span>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">🏡</div>
+            <h3 class="counter" data-target="150">0</h3>
+            <span>Home Visits</span>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">🩺</div>
+            <h3 class="counter" data-target="5">0</h3>
+            <span>Healthcare Services</span>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">😊</div>
+            <h3 class="counter" data-target="98">0</h3>
+            <span>Patient Satisfaction %</span>
+        </div>
+        </div>
+
+    <div class="ecg-animation">
+
+    <div class="heart-icon">
+        ❤️
+    </div>
+
+    <div class="ecg-line">
+
+        <svg viewBox="0 0 800 150">
+
+            <path d="
+            M0 75 
+            L130 75
+            L160 75
+            L190 25
+            L230 125
+            L270 75
+            L420 75
+            L450 75
+            L480 25
+            L520 125
+            L560 75
+            L800 75
+            "/>
+
+        </svg>
+
+    </div>
+
+    <div class="heart-icon">
+        ❤️
+    </div>
+
+</div>
+
+   
+
+</div>
+
+</section>
+
+<section id="about" class="about">
+
+    <div class="about-content">
+
+        <div class="about-text">
+
+            <span class="about-tag">
+                WHY CHOOSE
+            </span>
+
+            <h2>
+                SANO <span>HEALTH CARE</span>
+            </h2>
+
+            <div class="line"></div>
+
+            <p>
+                At SANO Health Care, we combine modern medical technology,
+                experienced healthcare professionals, and compassionate patient
+                care to deliver exceptional medical services. Our mission is to
+                provide trusted, affordable, and accessible healthcare for every
+                patient through innovation and excellence.
+            </p>
+
+            <div class="features">
+
+                <div class="feature">
+                    🩺 Experienced Doctors
+                </div>
+
+                <div class="feature">
+                    ❤️ Patient-Centered Care
+                </div>
+
+                <div class="feature">
+                    🏥 Modern Medical Equipment
+                </div>
+
+                <div class="feature">
+                    🚑 Emergency Support
+                </div>
+
+                <div class="feature">
+                    🔬 Advanced Diagnostics
+                </div>
+
+                <div class="feature">
+                    🌍 Trusted Healthcare
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="about-image">
+
+    <div class="medical-animation">
+
+        <div class="doctor-circle">
+            🩺
+        </div>
+
+        <div class="pulse-line">
+            ❤️━━━━━━╱╲━━━━━━╱╲━━━━━━
+        </div>
+
+        <div class="floating-card card1">
+            🏥
+        </div>
+
+        <div class="floating-card card2">
+            💊
+        </div>
+
+        <div class="floating-card card3">
+            🚑
+        </div>
+
+    </div>
+
+</div>
+    </div>
+
+</section>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <p class="contact-subtitle">
+        We'd love to hear from you. Reach out to SANO Health Care for appointments, inquiries, or any healthcare assistance.
+    </p>
+
+    <div class="contact-container">
+
+        <div class="company-card">
+
+            <div class="contact-info">
+
+                <div>
+                    <span class="label">📞 Phone</span><br>
+                    0923520623
+                </div>
+
+                <div>
+                    <span class="label">✉ Email</span><br>
+                    contact@sanohealthcare.com
+                </div>
+
+                <div>
+                    <span class="label">📍 Location</span><br>
+                    SANO Medical Center
+                </div>
+
+                <div>
+                    <span class="label">🕒 Working Hours</span><br>
+                    Mon - Sat | 8:00 AM - 6:00 PM
+                </div>
+
+            </div>
+
+            <hr style="margin:30px 0;">
+
+            <p>
+                <strong>Healthcare Team</strong><br><br>
+
+                Eyueal Eskeatnaf – Healthcare Administrator<br>
+                Eyosias Birhanu – Medical Service Coordinator
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 SANO Health Care | Quality Care • Professional Service • Better Health
+</footer>
+<script>
+
+const counters=document.querySelectorAll(".counter");
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+const counter=entry.target;
+
+const target=+counter.dataset.target;
+
+let count=0;
+
+const speed=target/80;
+
+const update=()=>{
+
+count+=speed;
+
+if(count<target){
+
+counter.innerText=Math.ceil(count);
+
+requestAnimationFrame(update);
+
+}else{
+
+counter.innerText=target+"+";
+
+}
+
+};
+
+update();
+
+observer.unobserve(counter);
+
+}
+
+});
+
+},{threshold:.5});
+
+counters.forEach(counter=>observer.observe(counter));
+
+</script>
+</body>
