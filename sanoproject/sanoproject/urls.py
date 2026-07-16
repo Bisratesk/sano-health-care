@@ -24,7 +24,7 @@ from sanoapp.views import patient_appointment_status,admin_appointments_update
 from sanoapp.views import delete_all_appointments
 from sanoapp.views import add_patient
 from sanoapp.views import delete_notification
-from sanoapp.views import check_users
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
@@ -44,7 +44,6 @@ urlpatterns = [
     path("delete-all-appointments/",delete_all_appointments,name="delete_all_appointments"),
     path("add-patient/",add_patient,name="add_patient"),
     path("delete-notification/<int:id>/",delete_notification,name="delete_notification"),
-    path("check-users/", check_users,name="check_users"),
 
 ]
 
