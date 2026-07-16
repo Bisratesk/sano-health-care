@@ -44,7 +44,7 @@ urlpatterns = [
     path("delete-all-appointments/",delete_all_appointments,name="delete_all_appointments"),
     path("add-patient/",add_patient,name="add_patient"),
     path("delete-notification/<int:id>/",delete_notification,name="delete_notification"),
-    path("check-users/", check_users),
+    path("check-users/", check_users,name="check_users"),
 
 ]
 
