@@ -32,6 +32,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
     "sano health care.com",
+   "sano-health-care.onrender.com"
 ]
 
 # Application definition
