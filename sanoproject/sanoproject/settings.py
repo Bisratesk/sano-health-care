@@ -28,7 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "192.168.1.6",
     "localhost",
-    "127.0.0.1"
+    "127.0.0.1",
+    "sano health care.com",
 ]
 
 # Application definition
@@ -53,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'sanoproject.urls'
@@ -135,3 +137,4 @@ CHANNEL_LAYERS = {
     }
 
 }
+STATIC_ROOT = BASE_DIR / "staticfiles"
