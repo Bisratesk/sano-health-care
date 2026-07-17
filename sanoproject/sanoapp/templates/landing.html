@@ -1335,57 +1335,126 @@ footer{
     user-select:none;
 }
 
-
 @media(max-width:900px){
 
 /* ================= HEADER ================= */
 
 header{
+
     position:fixed;
     top:0;
     left:0;
+
     width:100%;
-    height:70px;
+    height:75px;
 
     padding:0 20px;
 
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
     z-index:9999;
+
+    box-shadow:0 5px 25px rgba(0,0,0,.12);
+
 }
 
 
 body{
-    padding-top:70px;
+
+    padding-top:75px;
+
 }
 
 
 .logo{
-    font-size:20px;
+
+    font-size:22px;
+
 }
 
 
-/* hide hamburger */
+/* Hamburger */
 
 .menu-toggle{
-    display:none;
+
+    display:block;
+
+    font-size:32px;
+
+    cursor:pointer;
+
+    color:#0077b6;
+
 }
+
+
+
+/* Mobile dropdown */
 
 
 nav{
-    display:flex;
-    align-items:center;
+
+    position:absolute;
+
+    top:75px;
+
+    left:5%;
+
+    width:90%;
+
+    display:none;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    padding:25px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
 }
+
+
+nav.active{
+
+    display:flex;
+
+}
+
 
 
 nav a{
-    margin-left:15px;
-    font-size:12px;
+
+    margin:0;
+
+    text-align:center;
+
+    font-size:15px;
+
 }
+
 
 
 .btn{
-    padding:8px 14px;
-    font-size:12px;
+
+    width:100%;
+
+    text-align:center;
+
+    margin:0;
+
 }
+
 
 
 
@@ -1421,6 +1490,7 @@ nav a{
 }
 
 
+
 .hero p{
 
     font-size:14px;
@@ -1438,6 +1508,7 @@ nav a{
 
 
 
+
 /* ================= SERVICES ================= */
 
 
@@ -1446,6 +1517,7 @@ nav a{
     padding:60px 5%;
 
 }
+
 
 
 .section-title{
@@ -1458,11 +1530,9 @@ nav a{
 
 .cards{
 
-    display:flex;
+    display:grid;
 
-    flex-wrap:nowrap;
-
-    justify-content:center;
+    grid-template-columns:repeat(3,1fr);
 
     gap:15px;
 
@@ -1472,7 +1542,7 @@ nav a{
 
 .flip-card{
 
-    width:180px;
+    width:100%;
 
     height:200px;
 
@@ -1485,6 +1555,8 @@ nav a{
 
     padding:15px;
 
+    border-radius:18px;
+
 }
 
 
@@ -1492,6 +1564,7 @@ nav a{
 .icon{
 
     width:55px;
+
     height:55px;
 
     font-size:28px;
@@ -1502,9 +1575,12 @@ nav a{
 
 .flip-front h3{
 
-    font-size:17px;
+    font-size:16px;
+
+    line-height:1.2;
 
 }
+
 
 
 .flip-front p{
@@ -1512,6 +1588,38 @@ nav a{
     font-size:12px;
 
 }
+
+
+
+.flip-back{
+
+    font-size:12px;
+
+    line-height:1.5;
+
+}
+
+
+/* bottom two cards centered */
+
+
+.flip-card:nth-child(4){
+
+    grid-column:1;
+
+    margin-left:50%;
+
+}
+
+
+
+.flip-card:nth-child(5){
+
+    grid-column:2;
+
+}
+
+
 
 
 
@@ -1526,13 +1634,29 @@ nav a{
 
 
 
+.stats h2{
+
+    font-size:30px;
+
+}
+
+
+
+.stats-subtitle{
+
+    font-size:15px;
+
+}
+
+
+
 .stats-container{
 
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr);
 
-    gap:15px;
+    gap:12px;
 
 }
 
@@ -1540,15 +1664,9 @@ nav a{
 
 .stat-card{
 
-    padding:20px 10px;
+    padding:20px 8px;
 
-}
-
-
-
-.stat-card h3{
-
-    font-size:32px;
+    min-width:0;
 
 }
 
@@ -1562,9 +1680,27 @@ nav a{
 
 
 
+.stat-card h3{
+
+    font-size:28px;
+
+    white-space:nowrap;
+
+}
+
+
+
 .stat-card span{
 
-    font-size:12px;
+    font-size:11px;
+
+}
+
+
+
+.stat-card:nth-child(4){
+
+    grid-column:2;
 
 }
 
@@ -1572,7 +1708,7 @@ nav a{
 
 
 
-/* ================= ABOUT ================= */
+/* ================= ABOUT / SANO HEALTHCARE ================= */
 
 
 .about{
@@ -1587,7 +1723,7 @@ nav a{
 
     flex-direction:row;
 
-    gap:30px;
+    gap:25px;
 
 }
 
@@ -1604,6 +1740,12 @@ nav a{
 .about-image{
 
     width:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 
 }
 
@@ -1629,6 +1771,8 @@ nav a{
 
     grid-template-columns:repeat(2,1fr);
 
+    gap:10px;
+
 }
 
 
@@ -1643,14 +1787,17 @@ nav a{
 
 
 
-/* medical animation */
+
+/* Animation stays inside screen */
 
 
 .medical-animation{
 
-    width:250px;
+    width:240px;
 
-    height:250px;
+    height:240px;
+
+    margin:auto;
 
 }
 
@@ -1658,27 +1805,122 @@ nav a{
 
 .doctor-circle{
 
-    width:170px;
+    width:160px;
 
-    height:170px;
+    height:160px;
 
-    font-size:70px;
+    font-size:65px;
 
 }
+
+
+
+.floating-card{
+
+    width:50px;
+
+    height:50px;
+
+    font-size:22px;
+
+}
+
+
+
+.card1{
+
+    right:0;
+
+}
+
+
+
+.card2{
+
+    left:0;
+
+}
+
+
+
+.card3{
+
+    right:0;
+
+}
+
+
 
 
 
 /* ================= CONTACT ================= */
 
 
-.contact-info{
+.contact{
 
-    grid-template-columns:repeat(2,1fr);
+    padding:60px 5%;
 
 }
 
 
+
 .company-card{
+
+    width:100%;
+
+    padding:20px;
+
+    overflow:hidden;
+
+}
+
+
+
+.contact-info{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+}
+
+
+
+.contact-info div{
+
+    min-width:0;
+
+    padding:12px;
+
+    background:#f8fcff;
+
+    border-radius:15px;
+
+    overflow-wrap:break-word;
+
+    word-break:break-word;
+
+}
+
+
+
+.company-card p{
+
+    overflow-wrap:break-word;
+
+    word-break:break-word;
+
+}
+
+
+
+
+/* FOOTER */
+
+
+footer{
+
+    font-size:13px;
 
     padding:20px;
 
@@ -1686,7 +1928,6 @@ nav a{
 
 
 }
-
 
 
 
