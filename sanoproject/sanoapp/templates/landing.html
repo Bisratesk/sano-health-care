@@ -1335,7 +1335,7 @@ footer{
     user-select:none;
 }
 
-/* ================= PROFESSIONAL MOBILE DESIGN ================= */
+
 
 /* ================= PROFESSIONAL MOBILE DESIGN ================= */
 
@@ -1344,14 +1344,102 @@ footer{
 
 /* ================= HEADER ================= */
 
+/* ================= MOBILE STICKY HEADER ================= */
+
 header{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
 
     padding:15px 5%;
 
     height:75px;
 
+    background:white;
+
+    z-index:9999;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+
 }
 
+
+body{
+
+    padding-top:75px;
+
+}
+
+
+.logo{
+
+    font-size:22px;
+
+}
+
+
+.menu-toggle{
+
+    display:block;
+
+}
+
+
+
+/* dropdown menu */
+
+nav{
+
+    position:absolute;
+
+    top:75px;
+
+    left:5%;
+
+    width:90%;
+
+    display:none;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    padding:25px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+
+}
+
+
+nav.active{
+
+    display:flex;
+
+}
+
+
+nav a{
+
+    margin:0;
+
+    text-align:center;
+
+}
+
+
+.btn{
+
+    width:100%;
+
+    margin:0;
+
+}
 
 .logo{
 
@@ -1485,18 +1573,75 @@ nav a{
 /* ================= SERVICES ================= */
 
 
-.services{
+/* ================= MOBILE SERVICES (DESKTOP STYLE) ================= */
 
-    padding:60px 5% 80px;
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin:0;
 
 }
 
 
-.section-title{
+.flip-card{
+
+    width:100%;
+
+    height:190px;
+
+}
+
+
+
+.flip-front,
+.flip-back{
+
+    border-radius:20px;
+
+    padding:18px;
+
+}
+
+
+
+.icon{
+
+    width:60px;
+
+    height:60px;
 
     font-size:30px;
 
-    margin-bottom:30px;
+}
+
+
+.flip-front h3{
+
+    font-size:20px;
+
+}
+
+
+
+.flip-front p{
+
+    font-size:13px;
+
+}
+
+
+
+.flip-back{
+
+    font-size:13px;
+
+    line-height:1.5;
 
 }
 
@@ -1622,13 +1767,25 @@ nav a{
 
 .stats-container{
 
-    display:flex;
+    display:grid;
 
-    overflow-x:auto;
+    grid-template-columns:repeat(2,1fr);
 
     gap:15px;
 
-    padding-bottom:20px;
+}
+
+
+.stat-card{
+
+    padding:25px 15px;
+
+}
+
+
+.stat-card h3{
+
+    font-size:36px;
 
 }
 
