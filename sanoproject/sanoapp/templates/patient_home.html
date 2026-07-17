@@ -1296,33 +1296,32 @@ footer{
 
 
 
-    .cards{
+  .cards{
 
-        flex-direction:column;
+    display:grid;
 
-        align-items:center;
+    grid-template-columns:repeat(2,1fr);
 
-        gap:25px;
+    gap:15px;
 
-    }
+}
 
 
 
-    .card{
+   .cards{
 
-        width:90%;
+    display:grid;
 
-        max-width:350px;
+    grid-template-columns:repeat(2,1fr);
 
-        height:250px;
+    gap:15px;
 
-    }
-
+}
 
 
     .front{
 
-        font-size:23px;
+        font-size:18px;
 
     }
 
@@ -1330,24 +1329,23 @@ footer{
 
     .back{
 
-        font-size:15px;
+    font-size:12px;
 
-        padding:20px;
+    padding:15px;
 
-    }
+}
 
 
 
     .service-icon{
 
-        width:70px;
+    width:55px;
 
-        height:70px;
+    height:55px;
 
-        font-size:38px;
+    font-size:30px;
 
-    }
-
+}
 
 
     /* disable hover animation on touch devices */
@@ -1526,7 +1524,22 @@ footer{
 
 
 }
+@media(max-width:480px){
 
+.cards{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.card{
+
+    height:170px;
+
+}
+
+}
 </style>
 
 </head>
