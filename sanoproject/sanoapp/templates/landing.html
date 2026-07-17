@@ -1379,8 +1379,9 @@ footer{
 
 .hero img{
 
-    width:45%;
-
+    width:40%;
+    max-height:300px;
+    object-fit:cover;
     border-radius:25px;
 
 }
@@ -1481,18 +1482,6 @@ nav a{
 
 /* ================= HERO ================= */
 
-
-.hero{
-
-    min-height:90vh;
-
-    flex-direction:column;
-
-    padding:50px 5%;
-
-    gap:20px;
-
-}
 
 
 
@@ -2623,13 +2612,15 @@ document.querySelectorAll("#nav-menu a").forEach(link => {
 });
 // MOBILE SERVICE CARD AUTO FLIP
 
+
 const cards = document.querySelectorAll(".flip-card");
 
 cards.forEach(card => {
 
+    let timer;
+
     card.addEventListener("click", function(){
 
-        // remove flip from other cards
         cards.forEach(other => {
 
             if(other !== card){
@@ -2641,15 +2632,15 @@ cards.forEach(card => {
         });
 
 
-        // toggle current card
         card.classList.toggle("active");
 
 
-        // automatically flip back after 5 seconds
+        clearTimeout(timer);
+
 
         if(card.classList.contains("active")){
 
-            setTimeout(()=>{
+            timer=setTimeout(()=>{
 
                 card.classList.remove("active");
 
