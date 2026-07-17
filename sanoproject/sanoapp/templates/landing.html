@@ -1343,7 +1343,7 @@ footer{
 
     min-height:90vh;
 
-    flex-direction:row;
+    flex-direction:column;
 
     justify-content:space-between;
 
@@ -1628,11 +1628,19 @@ nav a{
 }
 
 
-.flip-card.active .flip-inner{
+.flip-card.active .flip-inner,
+.flip-card:active .flip-inner{
     transform:rotateY(180deg);
     -webkit-transform:rotateY(180deg);
 }
+.flip-card{
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+}
 
+.flip-card:hover .flip-inner{
+    transform:none;
+}
 /* ================= TRUSTED HEALTHCARE ================= */
 
 
@@ -2355,7 +2363,7 @@ with modern healthcare solutions.
             <h3 class="counter" data-target="98">0</h3>
             <span>Patient Satisfaction %</span>
         </div>
-        </div>
+        
 
     <div class="ecg-animation">
 
@@ -2616,9 +2624,11 @@ const cards = document.querySelectorAll(".flip-card");
 
 cards.forEach(card => {
 
-    let timer;   // separate timer for each card
+    let timer;
 
-    card.addEventListener("click", function(){
+    card.addEventListener("touchstart", function(e){
+
+        e.preventDefault();
 
         cards.forEach(other => {
 
@@ -2628,20 +2638,17 @@ cards.forEach(card => {
 
         });
 
-
         card.classList.toggle("active");
-
 
         clearTimeout(timer);
 
-
         if(card.classList.contains("active")){
 
-            timer = setTimeout(() => {
+            timer=setTimeout(()=>{
 
                 card.classList.remove("active");
 
-            }, 5000);
+            },5000);
 
         }
 
