@@ -1008,7 +1008,7 @@ footer{
 
 
 
-@keyframes float{
+@keyframes MedicalFloat{
 
     50%{
 
@@ -1335,93 +1335,511 @@ footer{
     user-select:none;
 }
 
-/* Mobile */
+/* ================= PROFESSIONAL MOBILE DESIGN ================= */
 
 @media(max-width:900px){
-    
-   header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    padding:18px 6%;
-}
 
-    .logo{
-        font-size:26px;
-    }
 
-    .menu-toggle{
-        display:block;
-    }
+/* ---------- HEADER ---------- */
 
-    nav{
-        width:100%;
-        display:none;
-        flex-direction:column;
-        margin-top:18px;
-        gap:15px;
 
-        background:white;
-        border-radius:15px;
+header{
 
-        padding:20px;
+    padding:16px 5%;
 
-        box-shadow:0 10px 25px rgba(0,0,0,.12);
-    }
-
-    nav.active{
-        display:flex;
-    }
-
-    nav a{
-        margin:0;
-        text-align:center;
-    }
-
-    .btn{
-        width:100%;
-        margin:0;
-    }
-
-    .hero{
-        flex-direction:column-reverse;
-        text-align:center;
-    }
-
-    .hero-text{
-        width:100%;
-    }
-
-    .hero h1{
-        font-size:38px;
-    }
-
-    .hero img{
-        width:100%;
-        max-width:340px;
-    }
-
-    .cards{
-        margin-bottom:0;
-    }
-
-    .stats-container,
-    .features,
-    .contact-info{
-        grid-template-columns:1fr;
-    }
-
-    .about-content{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .line{
-        margin:auto;
-    }
+    position:sticky;
 
 }
+
+
+.logo{
+
+    font-size:24px;
+
+}
+
+
+.menu-toggle{
+
+    font-size:30px;
+
+}
+
+
+nav{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:25px 15px;
+
+    border-radius:20px;
+
+    gap:18px;
+
+}
+
+
+nav a{
+
+    font-size:16px;
+
+    padding:10px;
+
+}
+
+
+.btn{
+
+    width:100%;
+
+    margin:0;
+
+    text-align:center;
+
+    padding:13px;
+
+}
+
+
+
+
+
+/* ---------- HERO ---------- */
+
+
+.hero{
+
+    min-height:auto;
+
+    padding:45px 5% 70px;
+
+    flex-direction:column-reverse;
+
+    gap:35px;
+
+    text-align:center;
+
+}
+
+
+.hero-text{
+
+    width:100%;
+
+}
+
+
+.hero h1{
+
+    font-size:36px;
+
+    line-height:1.2;
+
+}
+
+
+.hero p{
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    margin:20px 0;
+
+}
+
+
+.hero img{
+
+    width:100%;
+
+    max-width:320px;
+
+    border-radius:25px;
+
+}
+
+
+
+.appointment-btn{
+
+    width:100%;
+
+    padding:16px;
+
+}
+
+
+
+
+
+/* ---------- SECTION TITLES ---------- */
+
+
+.section-title{
+
+    font-size:32px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+/* ---------- SERVICES ---------- */
+
+
+.services{
+
+    padding:55px 5% 70px;
+
+}
+
+
+.cards{
+
+    margin-top:30px;
+
+    margin-bottom:0;
+
+    gap:20px;
+
+}
+
+
+.flip-card{
+
+    width:100%;
+
+    max-width:330px;
+
+    height:240px;
+
+}
+
+
+/* remove desktop hover feeling */
+
+.flip-card:hover{
+
+    transform:none;
+
+}
+
+
+.flip-front h3{
+
+    font-size:24px;
+
+}
+
+
+.flip-front p{
+
+    font-size:15px;
+
+}
+
+
+.flip-back{
+
+    padding:25px;
+
+}
+
+
+
+
+
+/* ---------- STATS ---------- */
+
+
+.stats{
+
+    padding:70px 5%;
+
+}
+
+
+.stats h2{
+
+    font-size:30px;
+
+}
+
+
+.stats-subtitle{
+
+    font-size:16px;
+
+    margin-bottom:40px;
+
+}
+
+
+.stats-container{
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+
+}
+
+
+.stat-card{
+
+    padding:30px 20px;
+
+    animation:none;
+
+}
+
+
+.stat-card h3{
+
+    font-size:40px;
+
+}
+
+
+.stat-icon{
+
+    font-size:42px;
+
+}
+
+
+.ecg-animation{
+
+    margin-top:50px;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+.heart-icon{
+
+    font-size:45px;
+
+}
+
+
+.ecg-line{
+
+    width:100%;
+
+}
+
+
+
+
+
+/* ---------- ABOUT ---------- */
+
+
+.about{
+
+    padding:70px 5%;
+
+}
+
+
+.about-content{
+
+    flex-direction:column;
+
+    gap:40px;
+
+    text-align:center;
+
+}
+
+
+.about h2{
+
+    font-size:34px;
+
+}
+
+
+.about p{
+
+    font-size:16px;
+
+    line-height:1.7;
+
+}
+
+
+.line{
+
+    margin:20px auto;
+
+}
+
+
+.features{
+
+    grid-template-columns:1fr;
+
+    gap:15px;
+
+}
+
+
+.feature{
+
+    padding:16px;
+
+}
+
+
+
+
+/* ---------- MEDICAL ANIMATION ---------- */
+
+
+.medical-animation{
+
+    width:300px;
+
+    height:300px;
+
+    margin:auto;
+
+}
+
+
+.doctor-circle{
+
+    width:190px;
+
+    height:190px;
+
+    font-size:75px;
+
+}
+
+
+.floating-card{
+
+    width:55px;
+
+    height:55px;
+
+    font-size:25px;
+
+}
+
+
+.card1{
+
+    top:20px;
+
+    right:20px;
+
+}
+
+
+.card2{
+
+    bottom:40px;
+
+    left:20px;
+
+}
+
+
+.card3{
+
+    top:130px;
+
+    right:-5px;
+
+}
+
+
+.pulse-line{
+
+    font-size:12px;
+
+    padding:10px;
+
+    bottom:35px;
+
+}
+
+
+
+
+
+/* ---------- CONTACT ---------- */
+
+
+.contact{
+
+    padding:60px 5%;
+
+}
+
+
+.contact-subtitle{
+
+    font-size:16px;
+
+}
+
+
+.company-card{
+
+    padding:25px 20px;
+
+    border-radius:20px;
+
+}
+
+
+.contact-info{
+
+    grid-template-columns:1fr;
+
+    gap:25px;
+
+}
+
+
+.label{
+
+    font-size:15px;
+
+}
+
+
+
+
+
+/* ---------- FOOTER ---------- */
+
+
+footer{
+
+    padding:20px;
+
+    font-size:14px;
+
+}
+
+
+}
+
+
 
 
 
