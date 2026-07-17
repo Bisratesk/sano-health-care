@@ -14,51 +14,59 @@
 
 <style>
 
+/* ================= RESET ================= */
+
 *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",Arial,sans-serif;
+}
 
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:"Segoe UI",Arial,sans-serif;
 
+html{
+    scroll-behavior:smooth;
 }
 
 
 body{
-
-background:#f6fbff;
-color:#333;
-
+    background:#f6fbff;
+    color:#333;
+    overflow-x:hidden;
 }
+
+
+/* ================= HEADER ================= */
 
 
 header{
 
-display:flex;
-justify-content:space-between;
-align-items:center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-padding:20px 8%;
+    padding:20px 8%;
 
-background:white;
+    background:white;
 
-position:sticky;
-top:0;
+    position:sticky;
+    top:0;
 
-z-index:1000;
+    z-index:1000;
 
-box-shadow:
-0 5px 20px rgba(0,0,0,.08);
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.08);
 
 }
 
 
+
 .logo{
 
-font-size:28px;
-font-weight:800;
+    font-size:28px;
+    font-weight:800;
 
-color:#0077b6;
+    color:#0077b6;
 
 }
 
@@ -66,26 +74,27 @@ color:#0077b6;
 
 nav{
 
-display:flex;
+    display:flex;
 
-align-items:center;
+    align-items:center;
 
-gap:30px;
+    gap:30px;
 
 }
 
 
+
 nav a{
 
-text-decoration:none;
+    text-decoration:none;
 
-color:#333;
+    color:#333;
 
-font-weight:600;
+    font-weight:600;
 
-position:relative;
+    position:relative;
 
-transition:.3s;
+    transition:.3s;
 
 }
 
@@ -93,21 +102,23 @@ transition:.3s;
 
 nav a:not(.logout)::after{
 
-content:"";
+    content:"";
 
-position:absolute;
+    position:absolute;
 
-left:0;
-bottom:-8px;
+    left:0;
 
-width:0;
-height:3px;
+    bottom:-8px;
 
-background:#0077b6;
+    width:0;
 
-border-radius:10px;
+    height:3px;
 
-transition:.3s;
+    background:#0077b6;
+
+    border-radius:20px;
+
+    transition:.3s;
 
 }
 
@@ -115,14 +126,15 @@ transition:.3s;
 
 nav a:not(.logout):hover::after{
 
-width:100%;
+    width:100%;
 
 }
 
 
+
 nav a:hover{
 
-color:#0077b6;
+    color:#0077b6;
 
 }
 
@@ -130,13 +142,13 @@ color:#0077b6;
 
 .logout{
 
-background:#dc3545;
+    background:#dc3545;
 
-color:white !important;
+    color:white !important;
 
-padding:10px 25px;
+    padding:10px 25px;
 
-border-radius:30px;
+    border-radius:30px;
 
 }
 
@@ -144,85 +156,122 @@ border-radius:30px;
 
 .logout:hover{
 
-background:#b02a37;
+    background:#b02a37;
 
-transform:translateY(-3px);
+    transform:translateY(-3px);
 
 }
 
-/* HERO */
+
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:32px;
+
+    cursor:pointer;
+
+    color:#0077b6;
+
+}
+
+
+
+/* ================= HERO ================= */
 
 
 .hero{
 
-min-height:90vh;
+    min-height:90vh;
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
-align-items:center;
+    align-items:center;
 
-text-align:center;
+    text-align:center;
 
-padding:50px;
+    padding:40px 5%;
 
-position:relative;
+    position:relative;
 
-background:
+    overflow:hidden;
 
-linear-gradient(
-rgba(0,119,182,.75),
-rgba(0,29,61,.65)
-),
-
-url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d");
-
-background-size:cover;
-
-background-position:center;
-
-color:white;
-
-overflow:hidden;
-
-}
-/* ================= NEW HERO DESIGN ================= */
+    color:white;
 
 
-.hero{
+    background:
 
-min-height:95vh;
+    linear-gradient(
+        rgba(0,119,182,.75),
+        rgba(0,29,61,.75)
+    ),
 
-display:flex;
+    url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d");
 
-justify-content:center;
 
-align-items:center;
+    background-size:cover;
 
-text-align:center;
-
-position:relative;
-
-overflow:hidden;
+    background-position:center;
 
 }
+
+
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    background:#00b4d8;
+
+    opacity:.15;
+
+    border-radius:50%;
+
+    top:-150px;
+
+    right:-150px;
+
+    animation:floatCircle 8s infinite;
+
+}
+
+
+
+@keyframes floatCircle{
+
+    50%{
+
+        transform:translateY(80px);
+
+    }
+
+}
+
 
 
 
 .hero-content{
 
-background:
-rgba(255,255,255,.12);
+    max-width:850px;
 
-padding:50px;
+    padding:50px;
 
-border-radius:35px;
+    border-radius:35px;
 
-backdrop-filter:blur(15px);
+    background:rgba(255,255,255,.12);
 
-animation:
-heroAppear 1.5s ease;
+    backdrop-filter:blur(15px);
+
+    animation:heroAppear 1.2s ease;
 
 }
 
@@ -230,21 +279,22 @@ heroAppear 1.5s ease;
 
 @keyframes heroAppear{
 
-from{
+    from{
 
-opacity:0;
+        opacity:0;
 
-transform:translateY(50px);
+        transform:translateY(50px);
 
-}
+    }
 
-to{
 
-opacity:1;
+    to{
 
-transform:translateY(0);
+        opacity:1;
 
-}
+        transform:translateY(0);
+
+    }
 
 }
 
@@ -253,8 +303,16 @@ transform:translateY(0);
 
 .hero h1{
 
-animation:
-titleGlow 3s infinite;
+    font-size:75px;
+
+    font-weight:800;
+
+    color:white;
+
+    text-shadow:
+    0 5px 20px rgba(0,0,0,.4);
+
+    animation:titleGlow 3s infinite;
 
 }
 
@@ -262,52 +320,57 @@ titleGlow 3s infinite;
 
 @keyframes titleGlow{
 
+    50%{
 
-50%{
+        text-shadow:
+        0 0 25px #90e0ef;
 
-text-shadow:
-0 0 25px #90e0ef;
-
-}
-
+    }
 
 }
 
+
+
+.hero span{
+
+    color:#90e0ef;
+
+}
 
 
 
 .hero-subtitle{
 
-font-size:25px;
+    margin-top:20px;
 
-margin-top:15px;
+    font-size:25px;
 
 }
 
 
 
-
-
 .welcome{
 
-display:inline-block;
+    display:inline-block;
 
-margin-top:20px;
+    margin-top:20px;
 
-padding:12px 30px;
+    padding:12px 30px;
 
-background:white;
+    background:white;
 
-color:#0077b6;
+    color:#0077b6;
 
-border-radius:50px;
+    border-radius:50px;
 
-box-shadow:
+    font-size:20px;
 
-0 10px 30px rgba(0,0,0,.2);
+    font-weight:700;
 
-animation:
-floatWelcome 3s infinite;
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.2);
+
+    animation:floatWelcome 3s infinite;
 
 }
 
@@ -315,243 +378,43 @@ floatWelcome 3s infinite;
 
 @keyframes floatWelcome{
 
+    50%{
 
-50%{
+        transform:translateY(-8px);
 
-transform:translateY(-8px);
-
-}
-
+    }
 
 }
 
 
 
-
-/* VIDEO */
-
-
-.health-video{
-
-width:500px;
-
-height:260px;
-
-margin:35px auto;
-
-border-radius:30px;
-
-overflow:hidden;
-
-position:relative;
-
-box-shadow:
-
-0 25px 60px rgba(0,0,0,.35);
-
-
-}
-
-
-
-.health-video video{
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-}
-
-
-
-
-
-.video-overlay{
-
-position:absolute;
-
-bottom:0;
-
-left:0;
-
-right:0;
-
-padding:20px;
-
-background:
-
-linear-gradient(
-transparent,
-rgba(0,0,0,.75)
-);
-
-color:white;
-
-font-size:18px;
-
-font-weight:700;
-
-}
-
-
-
-
-
-.health-video::after{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-border:3px solid #90e0ef;
-
-border-radius:30px;
-
-animation:
-
-videoPulse 2s infinite;
-
-}
-
-
-
-@keyframes videoPulse{
-
-
-50%{
-
-opacity:.3;
-
-transform:scale(1.04);
-
-}
-
-
-}
-
-
-/* animated medical glow */
-
-.hero::before{
-
-content:"";
-
-position:absolute;
-
-width:500px;
-
-height:500px;
-
-background:#00b4d8;
-
-border-radius:50%;
-
-opacity:.15;
-
-top:-150px;
-
-right:-150px;
-
-animation:floatCircle 8s infinite;
-
-}
-
-
-@keyframes floatCircle{
-
-50%{
-
-transform:translateY(80px);
-
-}
-
-}
-
-
-.hero img{
-
-width:260px;
-
-height:260px;
-
-object-fit:contain;
-
-margin-bottom:30px;
-
-}
-
-
-
-.hero h1{
-
-font-size:75px;
-
-color:white;
-
-font-weight:800;
-
-text-shadow:0 5px 20px rgba(0,0,0,.4);
-
-}
-
-
-.hero span{
-
-color:#90e0ef;
-
-}
-
-
-.hero p{
-
-font-size:22px;
-
-margin-top:20px;
-
-color:white;
-
-}
-
-.welcome{
-
-font-size:20px;
-
-margin-top:15px;
-
-font-weight:600;
-
-}
-
-
-
-/* BUTTON */
+/* ================= BUTTON ================= */
 
 
 .book-btn{
 
-display:inline-block;
+    display:inline-block;
 
-margin-top:35px;
+    margin-top:35px;
 
-padding:16px 45px;
+    padding:16px 45px;
 
-background:#0077b6;
+    background:#0077b6;
 
-color:white;
+    color:white;
 
-text-decoration:none;
+    text-decoration:none;
 
-border-radius:50px;
+    border-radius:50px;
 
-font-weight:700;
+    font-weight:800;
 
-transition:.3s;
+    font-size:18px;
 
-box-shadow:0 10px 25px rgba(0,119,182,.3);
+    transition:.3s;
+
+    box-shadow:
+    0 10px 25px rgba(0,119,182,.3);
 
 }
 
@@ -559,19 +422,84 @@ box-shadow:0 10px 25px rgba(0,119,182,.3);
 
 .book-btn:hover{
 
-background:#023e8a;
+    background:#023e8a;
 
-transform:translateY(-5px);
+    transform:translateY(-5px);
 
 }
-/* ================= SERVICES HEADER ANIMATION ================= */
+
+
+
+/* ================= VIDEO ================= */
+
+
+.health-video{
+
+    width:500px;
+
+    max-width:100%;
+
+    height:260px;
+
+    margin:35px auto;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.35);
+
+}
+
+
+
+.health-video video{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+
+.video-overlay{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+
+    right:0;
+
+    padding:20px;
+
+    background:
+    linear-gradient(
+        transparent,
+        rgba(0,0,0,.75)
+    );
+
+    color:white;
+
+    font-weight:700;
+
+}
+ 
+/* ================= SERVICES ================= */
 
 
 .services{
 
-padding:100px 8%;
+    padding:100px 8%;
 
-text-align:center;
+    text-align:center;
 
 }
 
@@ -579,12 +507,9 @@ text-align:center;
 
 .section-header{
 
-position:relative;
+    margin-bottom:70px;
 
-margin-bottom:70px;
-
-animation:
-fadeServices 1.2s ease;
+    animation:fadeServices 1.2s ease;
 
 }
 
@@ -592,21 +517,22 @@ fadeServices 1.2s ease;
 
 @keyframes fadeServices{
 
-from{
+    from{
 
-opacity:0;
+        opacity:0;
 
-transform:translateY(50px);
+        transform:translateY(50px);
 
-}
+    }
 
-to{
 
-opacity:1;
+    to{
 
-transform:translateY(0);
+        opacity:1;
 
-}
+        transform:translateY(0);
+
+    }
 
 }
 
@@ -614,17 +540,17 @@ transform:translateY(0);
 
 .section-header span{
 
-display:inline-block;
+    display:inline-block;
 
-font-size:15px;
+    color:#00b4d8;
 
-font-weight:800;
+    font-size:15px;
 
-letter-spacing:4px;
+    font-weight:800;
 
-color:#00b4d8;
+    letter-spacing:4px;
 
-margin-bottom:15px;
+    margin-bottom:15px;
 
 }
 
@@ -632,13 +558,11 @@ margin-bottom:15px;
 
 .section-header h2{
 
-font-size:50px;
+    font-size:50px;
 
-color:#023e8a;
+    color:#023e8a;
 
-font-weight:800;
-
-position:relative;
+    font-weight:800;
 
 }
 
@@ -646,34 +570,19 @@ position:relative;
 
 .section-header h2::after{
 
-content:"";
+    content:"";
 
-display:block;
+    display:block;
 
-width:120px;
+    width:120px;
 
-height:5px;
+    height:5px;
 
-background:#00b4d8;
+    background:#00b4d8;
 
-border-radius:20px;
+    border-radius:20px;
 
-margin:25px auto;
-
-animation:
-lineGrow 2s infinite;
-
-}
-
-
-
-@keyframes lineGrow{
-
-50%{
-
-width:200px;
-
-}
+    margin:25px auto;
 
 }
 
@@ -681,33 +590,31 @@ width:200px;
 
 .section-header p{
 
-max-width:700px;
+    max-width:700px;
 
-margin:auto;
+    margin:auto;
 
-font-size:19px;
+    font-size:19px;
 
-line-height:1.8;
+    line-height:1.8;
 
-color:#666;
+    color:#666;
 
 }
 
 
 
-
 .medical-line{
 
-margin-top:35px;
+    margin-top:35px;
 
-font-size:25px;
+    color:#0077b6;
 
-letter-spacing:5px;
+    font-size:25px;
 
-color:#0077b6;
+    letter-spacing:5px;
 
-animation:
-heartbeatLine 2s infinite;
+    animation:heartbeatLine 2s infinite;
 
 }
 
@@ -715,342 +622,263 @@ heartbeatLine 2s infinite;
 
 @keyframes heartbeatLine{
 
+    50%{
 
-50%{
+        transform:scale(1.08);
 
-transform:scale(1.08);
-
-}
-
-
-}
-
-
-/* SERVICES */
-
-
-.services{
-
-padding:90px 8%;
-
-text-align:center;
+    }
 
 }
 
 
 
-.services h2{
+/* ================= SERVICE CARDS ================= */
 
-font-size:45px;
-
-color:#023e8a;
-
-margin-bottom:50px;
-
-}
-.service-icon{
-
-width:90px;
-
-height:90px;
-
-border-radius:50%;
-
-background:rgba(255,255,255,.2);
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:50px;
-
-backdrop-filter:blur(5px);
-
-transition:.5s;
-
-}
-
-
-.card:hover .service-icon{
-
-transform:
-
-rotate(10deg)
-scale(1.2);
-
-background:white;
-
-box-shadow:
-
-0 0 25px white;
-
-}
 
 
 .cards{
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
-gap:35px;
+    flex-wrap:wrap;
 
-flex-wrap:wrap;
+    gap:35px;
 
-perspective:1200px;
+    perspective:1200px;
 
 }
+
+
 
 .card{
-width:320px;
-height:280px;
-}
 
+    width:320px;
 
-/* other cards become less visible */
+    height:280px;
 
-.cards:hover .card:not(:hover){
+    cursor:pointer;
 
-opacity:.55;
-
-transform:scale(.95);
-
-filter:blur(1px);
+    transition:.4s;
 
 }
 
-
-/* selected card rises */
-
-.card:hover{
-
-transform:
-translateY(-35px)
-scale(1.08);
-
-z-index:10;
-
-}
 
 
 .inner{
 
-width:100%;
+    width:100%;
 
-height:100%;
+    height:100%;
 
-position:relative;
+    position:relative;
 
-transition:
-transform .8s cubic-bezier(.4,2,.6,1);
+    transition:
 
-transform-style:preserve-3d;
+    transform .8s cubic-bezier(.4,2,.6,1);
+
+    transform-style:preserve-3d;
 
 }
+
+
+
 .card:hover .inner{
 
     transform:rotateY(180deg);
-    animation:none;
-
-}
-.card:hover .front{
-
-box-shadow:
-
-0 0 25px rgba(0,180,216,.8),
-0 25px 60px rgba(0,119,182,.35);
 
 }
 
-
-.card:hover .back{
-
-box-shadow:
-
-0 0 30px rgba(0,180,216,.5),
-0 25px 60px rgba(0,0,0,.2);
-
-}
 
 
 .front,
 .back{
 
-position:absolute;
+    position:absolute;
 
-top:0;
-left:0;
+    inset:0;
 
-width:100%;
+    display:flex;
 
-height:100%;
+    justify-content:center;
 
-display:flex;
+    align-items:center;
 
-align-items:center;
+    flex-direction:column;
 
-justify-content:center;
+    text-align:center;
 
-text-align:center;
+    padding:30px;
 
-padding:30px;
+    border-radius:25px;
 
-border-radius:25px;
+    backface-visibility:hidden;
 
-backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
 
--webkit-backface-visibility:hidden;
+    box-shadow:
 
-box-shadow:0 15px 40px rgba(0,0,0,.12);
+    0 15px 40px rgba(0,0,0,.12);
 
 }
+
+
+
+/* FRONT */
+
 
 .front{
+
     color:white;
+
     font-size:27px;
+
     font-weight:700;
-    flex-direction:column;
+
     gap:20px;
-    background:
-    linear-gradient(
-    135deg,
-    #0077b6,
-    #00b4d8
-    );
-    position:relative;
-    overflow:hidden;
-    transition:.4s;
-}
-
-.front::before{
-
-content:"";
-
-position:absolute;
-
-width:180px;
-
-height:180px;
-
-background:white;
-
-opacity:.15;
-
-border-radius:50%;
-
-top:-70px;
-
-right:-50px;
-
-}
-
-.inner{
-
-transform-origin:center;
-
-}
-.front::after{
-
-font-size:60px;
-
-}
-
-
-.card:hover{
-
-    transform:translateY(-15px);
-
-}
-
-
-.back{
-
-background:white;
-
-transform:rotateY(180deg);
-
-line-height:1.7;
-
-font-size:17px;
-
-flex-direction:column;
-
-gap:15px;
-
-}
-
-
-.card-btn{
-
-display:inline-block;
-
-padding:10px 25px;
-
-background:#0077b6;
-
-color:white;
-
-text-decoration:none;
-
-border-radius:30px;
-
-font-weight:700;
-
-transition:.3s;
-
-}
-
-
-.card-btn:hover{
-
-background:#023e8a;
-
-transform:translateY(-3px);
-
-}
-.service-icon{
-
-width:90px;
-
-height:90px;
-
-border-radius:50%;
-
-background:rgba(255,255,255,.2);
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:50px;
-
-backdrop-filter:blur(5px);
-
-}
-
-/* APPOINTMENT SECTION */
-
-
-/* ================= APPOINTMENT ANIMATION ================= */
-
-.appointment-box{
-
-    margin:100px auto;
-
-    width:80%;
-
-    padding:70px 50px;
 
     background:
+
     linear-gradient(
         135deg,
         #0077b6,
         #00b4d8
     );
+
+    overflow:hidden;
+
+}
+
+
+
+.front::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:white;
+
+    opacity:.15;
+
+    border-radius:50%;
+
+    top:-70px;
+
+    right:-50px;
+
+}
+
+
+
+.service-icon{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:50px;
+
+    background:
+
+    rgba(255,255,255,.2);
+
+    backdrop-filter:blur(5px);
+
+    transition:.4s;
+
+}
+
+
+
+.card:hover .service-icon{
+
+    transform:
+
+    rotate(10deg)
+
+    scale(1.2);
+
+    background:white;
+
+}
+
+
+
+/* BACK */
+
+
+.back{
+
+    background:white;
+
+    transform:rotateY(180deg);
+
+    line-height:1.7;
+
+    font-size:17px;
+
+    gap:15px;
+
+}
+
+
+
+.card-btn{
+
+    display:inline-block;
+
+    padding:10px 25px;
+
+    background:#0077b6;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+
+.card-btn:hover{
+
+    background:#023e8a;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/* ================= APPOINTMENT SECTION ================= */
+
+
+.appointment-box{
+
+    width:80%;
+
+    margin:100px auto;
+
+    padding:70px 50px;
 
     border-radius:35px;
 
@@ -1062,16 +890,26 @@ backdrop-filter:blur(5px);
 
     overflow:hidden;
 
+    background:
+
+    linear-gradient(
+        135deg,
+        #0077b6,
+        #00b4d8
+    );
+
+
     box-shadow:
+
     0 25px 60px rgba(0,119,182,.35);
 
+
     animation:
-    appointmentFloat 5s ease-in-out infinite;
+    appointmentFloat 5s infinite;
 
 }
 
 
-/* floating movement */
 
 @keyframes appointmentFloat{
 
@@ -1084,8 +922,6 @@ backdrop-filter:blur(5px);
 }
 
 
-
-/* moving circles */
 
 .appointment-box::before{
 
@@ -1107,9 +943,6 @@ backdrop-filter:blur(5px);
 
     left:-100px;
 
-    animation:
-    rotateCircle 10s linear infinite;
-
 }
 
 
@@ -1130,60 +963,25 @@ backdrop-filter:blur(5px);
 
     border-radius:50%;
 
-    bottom:-100px;
-
     right:-80px;
 
-    animation:
-    rotateCircle 12s linear infinite reverse;
+    bottom:-100px;
 
 }
-
-
-
-@keyframes rotateCircle{
-
-    50%{
-
-        transform:
-        rotate(180deg)
-        scale(1.2);
-
-    }
-
-}
-
-
 
 
 
 .appointment-box h2{
 
+    position:relative;
+
+    z-index:2;
+
     font-size:42px;
 
-    position:relative;
-
-    z-index:2;
-
 }
 
 
-
-.appointment-box p{
-
-    margin-top:20px;
-
-    font-size:20px;
-
-    position:relative;
-
-    z-index:2;
-
-}
-
-
-
-/* heartbeat icon */
 
 .appointment-box h2::before{
 
@@ -1195,8 +993,7 @@ backdrop-filter:blur(5px);
 
     margin-bottom:15px;
 
-    animation:
-    heartBeat 1.2s infinite;
+    animation:heartBeat 1.2s infinite;
 
 }
 
@@ -1226,174 +1023,512 @@ backdrop-filter:blur(5px);
 
 
 
-
-
-.book-btn{
-
-    display:inline-block;
-
-    margin-top:35px;
-
-    padding:18px 50px;
-
-    background:white;
-
-    color:#0077b6;
-
-    text-decoration:none;
-
-    border-radius:50px;
-
-    font-weight:800;
-
-    font-size:18px;
+.appointment-box p{
 
     position:relative;
 
     z-index:2;
 
-    overflow:hidden;
+    margin-top:20px;
 
-    transition:.4s;
+    font-size:20px;
 
 }
 
 
 
-/* button shine */
+.appointment-box .book-btn{
 
-.book-btn::before{
+    position:relative;
 
-    content:"";
-
-    position:absolute;
-
-    width:40px;
-
-    height:100%;
+    z-index:2;
 
     background:white;
 
-    opacity:.7;
-
-    left:-60px;
-
-    top:0;
-
-    transform:skewX(-30deg);
-
-    animation:
-    shine 3s infinite;
+    color:#0077b6;
 
 }
 
 
 
-@keyframes shine{
-
-    100%{
-
-        left:120%;
-
-    }
-
-}
-
-
-
-.book-btn:hover{
-
-    transform:
-    scale(1.1)
-    translateY(-5px);
+.appointment-box .book-btn:hover{
 
     background:#023e8a;
 
     color:white;
 
-    box-shadow:
-    0 15px 35px rgba(0,0,0,.3);
-
 }
+
+
+
+/* ================= BACK HOME ================= */
+
+
 .back-home{
 
-display:block;
-text-align:center;
-margin-top:20px;
+    display:block;
 
-color:#0077b6;
+    text-align:center;
 
-text-decoration:none;
+    margin-top:20px;
 
-font-size:16px;
+    color:#0077b6;
 
-font-weight:600;
+    text-decoration:none;
+
+    font-weight:600;
 
 }
+
 
 
 .back-home:hover{
 
-text-decoration:underline;
+    text-decoration:underline;
 
 }
 
-
-
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 
 footer{
 
-background:#001d3d;
+    background:#001d3d;
 
-color:white;
+    color:white;
 
-text-align:center;
+    text-align:center;
 
-padding:25px;
+    padding:25px;
+
+    font-size:15px;
 
 }
 
 
+
+/* ================= TABLET + MOBILE ================= */
 
 
 @media(max-width:900px){
 
 
-.hero h1{
+    header{
 
-font-size:45px;
+        padding:18px 5%;
+
+        flex-direction:row;
+
+    }
+
+
+
+    .logo{
+
+        font-size:20px;
+
+    }
+
+
+
+    .menu-toggle{
+
+        display:block;
+
+    }
+
+
+
+    nav{
+
+        position:absolute;
+
+        top:75px;
+
+        left:5%;
+
+        width:90%;
+
+        background:white;
+
+        border-radius:20px;
+
+        padding:25px;
+
+        display:none;
+
+        flex-direction:column;
+
+        gap:20px;
+
+        box-shadow:
+
+        0 20px 40px rgba(0,0,0,.15);
+
+    }
+
+
+
+    nav.active{
+
+        display:flex;
+
+    }
+
+
+
+    nav a{
+
+        text-align:center;
+
+        width:100%;
+
+    }
+
+
+
+    .logout{
+
+        width:auto;
+
+    }
+
+
+
+
+
+    /* HERO */
+
+
+    .hero{
+
+        min-height:80vh;
+
+        padding:30px 5%;
+
+    }
+
+
+
+    .hero-content{
+
+        width:100%;
+
+        padding:30px 20px;
+
+    }
+
+
+
+    .hero h1{
+
+        font-size:42px;
+
+    }
+
+
+
+    .hero-subtitle{
+
+        font-size:18px;
+
+    }
+
+
+
+    .welcome{
+
+        font-size:16px;
+
+        padding:10px 20px;
+
+    }
+
+
+
+    .book-btn{
+
+        padding:15px 30px;
+
+        font-size:15px;
+
+    }
+
+
+
+
+    /* VIDEO */
+
+
+    .health-video{
+
+        height:200px;
+
+    }
+
+
+
+
+    /* SERVICES */
+
+
+    .services{
+
+        padding:60px 5%;
+
+    }
+
+
+
+    .section-header h2{
+
+        font-size:32px;
+
+    }
+
+
+
+    .section-header p{
+
+        font-size:15px;
+
+    }
+
+
+
+    .cards{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:25px;
+
+    }
+
+
+
+    .card{
+
+        width:90%;
+
+        max-width:350px;
+
+        height:250px;
+
+    }
+
+
+
+    .front{
+
+        font-size:23px;
+
+    }
+
+
+
+    .back{
+
+        font-size:15px;
+
+        padding:20px;
+
+    }
+
+
+
+    .service-icon{
+
+        width:70px;
+
+        height:70px;
+
+        font-size:38px;
+
+    }
+
+
+
+    /* disable hover animation on touch devices */
+
+
+    .card:hover{
+
+        transform:none;
+
+    }
+
+
+
+    .card:hover .inner{
+
+        transform:none;
+
+    }
+
+
+
+    /* mobile tap flip */
+
+
+    .card.active .inner{
+
+        transform:rotateY(180deg);
+
+    }
+
+
+
+
+
+    /* APPOINTMENT */
+
+
+    .appointment-box{
+
+        width:90%;
+
+        padding:45px 20px;
+
+        margin:60px auto;
+
+    }
+
+
+
+    .appointment-box h2{
+
+        font-size:30px;
+
+    }
+
+
+
+    .appointment-box p{
+
+        font-size:16px;
+
+    }
+
+
 
 }
 
 
-.cards{
 
-flex-direction:column;
+/* ================= SMALL PHONES ================= */
 
-align-items:center;
+
+@media(max-width:480px){
+
+
+    .logo{
+
+        font-size:17px;
+
+    }
+
+
+
+    .hero h1{
+
+        font-size:34px;
+
+    }
+
+
+
+    .hero-subtitle{
+
+        font-size:16px;
+
+    }
+
+
+
+    .welcome{
+
+        width:100%;
+
+    }
+
+
+
+    .book-btn{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+
+
+    .card{
+
+        width:100%;
+
+        height:240px;
+
+    }
+
+
+
+    .front{
+
+        font-size:21px;
+
+    }
+
+
+
+    .back{
+
+        font-size:14px;
+
+    }
+
+
+
+    .appointment-box h2{
+
+        font-size:24px;
+
+    }
+
+
+
+    footer{
+
+        font-size:13px;
+
+    }
+
 
 }
 
 
-header{
 
-flex-direction:column;
-
-}
+/* ================= REDUCED MOTION ================= */
 
 
-nav{
+@media(prefers-reduced-motion:reduce){
 
-margin-top:20px;
 
-}
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
 
 
 }
 
 </style>
+
 </head>
 <body>
 
@@ -1402,7 +1537,9 @@ margin-top:20px;
 <div class="logo">
     🏥 SANO Health Care
 </div>
-
+<div class="menu-toggle" id="menu-toggle">
+☰
+</div>
 
 <nav>
 
@@ -1438,44 +1575,26 @@ margin-top:20px;
 
 <div class="hero-content">
 
-
 <h1>
-
-Welcome to 
-<span>SANO</span>
-
+Welcome to <span>SANO</span>
 </h1>
 
-
 <p class="hero-subtitle">
-
 Your personal healthcare portal
-
 </p>
 
-
-
 <div class="welcome">
-
-❤️ Hello  {{request.user.username}}
-
+❤️ Hello {{request.user.username}}
 </div>
-
-
-
-
-
-</div>
-
-
 
 <a href="{% url 'appointment' %}" class="book-btn">
-
 Book Your Appointment
-
 </a>
 
+</div>
+
 </section>
+
 
 <section class="services">
 
@@ -1736,6 +1855,82 @@ Need help? Our healthcare team is ready to assist you.
 Professional Healthcare Services
 
 </footer>
+<script>
+
+const menuToggle=document.getElementById("menu-toggle");
+const nav=document.querySelector("nav");
+
+
+menuToggle.onclick=function(){
+
+    nav.classList.toggle("active");
+
+
+    if(nav.classList.contains("active")){
+
+        menuToggle.innerHTML="✕";
+
+    }else{
+
+        menuToggle.innerHTML="☰";
+
+    }
+
+}
+
+
+
+document.querySelectorAll("nav a").forEach(link=>{
+
+link.onclick=function(){
+
+nav.classList.remove("active");
+
+menuToggle.innerHTML="☰";
+
+}
+
+});
+
+
+
+// mobile card flip
+
+document.querySelectorAll(".card").forEach(card=>{
+
+
+card.addEventListener("click",()=>{
+
+
+document.querySelectorAll(".card").forEach(c=>{
+
+if(c!==card){
+
+c.classList.remove("active");
+
+}
+
+});
+
+
+card.classList.toggle("active");
+
+
+setTimeout(()=>{
+
+card.classList.remove("active");
+
+},5000);
+
+
+
+});
+
+
+});
+
+
+</script>
 
 
 </body>
