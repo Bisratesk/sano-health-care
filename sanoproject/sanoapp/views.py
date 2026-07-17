@@ -414,3 +414,10 @@ def delete_notification(request,id):
     notification.delete()
 
     return redirect("admin_dashboard")
+
+from django.http import JsonResponse
+from django.contrib.auth.models import User
+
+def check_users(request):
+    users = list(User.objects.values("username"))
+    return JsonResponse(users, safe=False)

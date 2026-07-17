@@ -85,13 +85,13 @@ ASGI_APPLICATION = 'sanoproject.asgi.application'
 
 
 
+import dj_database_url
+
 DATABASES = {
-    "default": dj_database_url.config(
-        default=os.environ.get("DATABASE_URL")
+    "default": dj_database_url.parse(
+       ' postgresql://sano_db_user:J29HF6HunCk67Rd0Ym8oXUaUmfa4kuGU@dpg-d9ccnnr7uimc73d86icg-a.frankfurt-postgres.render.com/sano_db'
     )
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
 
