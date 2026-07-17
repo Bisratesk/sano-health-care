@@ -2613,20 +2613,21 @@ document.querySelectorAll("#nav-menu a").forEach(link => {
     });
 
 });
-// MOBILE SERVICE CARD AUTO FLIP
+// SERVICE CARD AUTO FLIP
 const cards = document.querySelectorAll(".flip-card");
- let timer;
 
 cards.forEach(card => {
 
-   
+    let timer;   // separate timer for each card
 
     card.addEventListener("click", function(){
 
-        cards.forEach(other=>{
+        cards.forEach(other => {
+
             if(other !== card){
                 other.classList.remove("active");
             }
+
         });
 
 
@@ -2638,11 +2639,11 @@ cards.forEach(card => {
 
         if(card.classList.contains("active")){
 
-            timer=setTimeout(()=>{
+            timer = setTimeout(() => {
 
                 card.classList.remove("active");
 
-            },5000);
+            }, 5000);
 
         }
 
