@@ -635,14 +635,16 @@ nav a:hover{
 /* ================= SERVICE CARDS ================= */
 
 
+/* ================= SERVICE CARDS ================= */
+
 
 .cards{
 
-    display:flex;
+    display:grid;
+
+    grid-template-columns:repeat(3,320px);
 
     justify-content:center;
-
-    flex-wrap:wrap;
 
     gap:35px;
 
@@ -660,8 +662,6 @@ nav a:hover{
 
     cursor:pointer;
 
-    transition:.4s;
-
 }
 
 
@@ -674,9 +674,7 @@ nav a:hover{
 
     position:relative;
 
-    transition:
-
-    transform .8s cubic-bezier(.4,2,.6,1);
+    transition:transform .8s cubic-bezier(.4,2,.6,1);
 
     transform-style:preserve-3d;
 
@@ -709,16 +707,17 @@ nav a:hover{
 
     text-align:center;
 
-    padding:30px;
+    padding:25px;
 
     border-radius:25px;
+
+    overflow:hidden;
 
     backface-visibility:hidden;
 
     -webkit-backface-visibility:hidden;
 
     box-shadow:
-
     0 15px 40px rgba(0,0,0,.12);
 
 }
@@ -732,11 +731,11 @@ nav a:hover{
 
     color:white;
 
-    font-size:27px;
+    font-size:25px;
 
     font-weight:700;
 
-    gap:20px;
+    gap:15px;
 
     background:
 
@@ -745,8 +744,6 @@ nav a:hover{
         #0077b6,
         #00b4d8
     );
-
-    overflow:hidden;
 
 }
 
@@ -776,6 +773,9 @@ nav a:hover{
 
 
 
+/* ICON */
+
+
 .service-icon{
 
     width:90px;
@@ -793,26 +793,9 @@ nav a:hover{
     font-size:50px;
 
     background:
-
     rgba(255,255,255,.2);
 
     backdrop-filter:blur(5px);
-
-    transition:.4s;
-
-}
-
-
-
-.card:hover .service-icon{
-
-    transform:
-
-    rotate(10deg)
-
-    scale(1.2);
-
-    background:white;
 
 }
 
@@ -827,11 +810,13 @@ nav a:hover{
 
     transform:rotateY(180deg);
 
-    line-height:1.7;
+    font-size:15px;
 
-    font-size:17px;
+    line-height:1.5;
 
-    gap:15px;
+    color:#444;
+
+    justify-content:space-between;
 
 }
 
@@ -839,9 +824,7 @@ nav a:hover{
 
 .card-btn{
 
-    display:inline-block;
-
-    padding:10px 25px;
+    padding:8px 20px;
 
     background:#0077b6;
 
@@ -851,21 +834,10 @@ nav a:hover{
 
     border-radius:30px;
 
-    font-weight:700;
-
-    transition:.3s;
+    font-size:14px;
 
 }
 
-
-
-.card-btn:hover{
-
-    background:#023e8a;
-
-    transform:translateY(-3px);
-
-}
 
 
 
@@ -1113,395 +1085,194 @@ footer{
 @media(max-width:900px){
 
 
-    header{
-
-        padding:18px 5%;
-
-        flex-direction:row;
-
-    }
-
-
-
-    .logo{
-
-        font-size:20px;
-
-    }
-
-
-
-    .menu-toggle{
-
-        display:block;
-
-    }
-
-
-
-    nav{
-
-        position:absolute;
-
-        top:75px;
-
-        left:5%;
-
-        width:90%;
-
-        background:white;
-
-        border-radius:20px;
-
-        padding:25px;
-
-        display:none;
-
-        flex-direction:column;
-
-        gap:20px;
-
-        box-shadow:
-
-        0 20px 40px rgba(0,0,0,.15);
-
-    }
-
-
-
-    nav.active{
-
-        display:flex;
-
-    }
-
-
-
-    nav a{
-
-        text-align:center;
-
-        width:100%;
-
-    }
-
-
-
-    .logout{
-
-        width:auto;
-
-    }
-
-
-
-
-
-    /* HERO */
-
-
-    .hero{
-
-        min-height:80vh;
-
-        padding:30px 5%;
-
-    }
-
-
-
-    .hero-content{
-
-        width:100%;
-
-        padding:30px 20px;
-
-    }
-
-
-
-    .hero h1{
-
-        font-size:42px;
-
-    }
-
-
-
-    .hero-subtitle{
-
-        font-size:18px;
-
-    }
-
-
-
-    .welcome{
-
-        font-size:16px;
-
-        padding:10px 20px;
-
-    }
-
-
-
-    .book-btn{
-
-        padding:15px 30px;
-
-        font-size:15px;
-
-    }
-
-
-
-
-    /* VIDEO */
-
-
-    .health-video{
-
-        height:200px;
-
-    }
-
-
-
-
-    /* SERVICES */
-
-
-    .services{
-
-        padding:60px 5%;
-
-    }
-
-
-
-    .section-header h2{
-
-        font-size:32px;
-
-    }
-
-
-
-    .section-header p{
-
-        font-size:15px;
-
-    }
-
-
-
-  .cards{
-
-    display:grid;
+.cards{
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:15px;
+    gap:20px;
 
 }
 
 
 
-   .cards{
+.card{
 
-    display:grid;
+    width:100%;
 
-    grid-template-columns:repeat(2,1fr);
-
-    gap:15px;
+    height:200px;
 
 }
 
 
-    .front{
 
-        font-size:18px;
+.front{
 
-    }
+    font-size:17px;
+
+}
 
 
 
-    .back{
+.service-icon{
+
+    width:60px;
+
+    height:60px;
+
+    font-size:32px;
+
+}
+
+
+
+.back{
 
     font-size:12px;
 
-    padding:15px;
+    padding:12px;
 
 }
 
 
 
-    .service-icon{
+.card-btn{
 
-    width:55px;
+    padding:6px 12px;
 
-    height:55px;
-
-    font-size:30px;
+    font-size:11px;
 
 }
 
 
-    /* disable hover animation on touch devices */
+/* disable desktop hover */
 
+.card:hover .inner{
 
-    .card:hover{
-
-        transform:none;
-
-    }
-
-
-
-    .card:hover .inner{
-
-        transform:none;
-
-    }
-
-
-
-    /* mobile tap flip */
-
-
-    .card.active .inner{
-
-        transform:rotateY(180deg);
-
-    }
-
-
-
-
-
-    /* APPOINTMENT */
-
-
-    .appointment-box{
-
-        width:90%;
-
-        padding:45px 20px;
-
-        margin:60px auto;
-
-    }
-
-
-
-    .appointment-box h2{
-
-        font-size:30px;
-
-    }
-
-
-
-    .appointment-box p{
-
-        font-size:16px;
-
-    }
-
-
+    transform:none;
 
 }
 
+
+/* tap flip */
+
+.card.active .inner{
+
+    transform:rotateY(180deg);
+
+}
+
+
+}
 
 
 /* ================= SMALL PHONES ================= */
 
-
 @media(max-width:480px){
 
 
-    .logo{
+.logo{
 
-        font-size:17px;
+    font-size:17px;
 
-    }
-
-
-
-    .hero h1{
-
-        font-size:34px;
-
-    }
+}
 
 
+.hero h1{
 
-    .hero-subtitle{
+    font-size:34px;
 
-        font-size:16px;
-
-    }
-
+}
 
 
-    .welcome{
+.hero-subtitle{
 
-        width:100%;
+    font-size:16px;
 
-    }
+}
 
 
+.cards{
 
-    .book-btn{
+    grid-template-columns:repeat(2,1fr);
 
-        width:100%;
+    gap:12px;
 
-        text-align:center;
-
-    }
+}
 
 
 
-    .card{
+.card{
 
-        width:100%;
+    height:175px;
 
-        height:240px;
-
-    }
+}
 
 
 
-    .front{
+.front{
 
-        font-size:21px;
+    font-size:14px;
 
-    }
+    padding:10px;
 
-
-
-    .back{
-
-        font-size:14px;
-
-    }
+}
 
 
 
-    .appointment-box h2{
+.service-icon{
 
-        font-size:24px;
+    width:50px;
 
-    }
+    height:50px;
+
+    font-size:25px;
+
+}
 
 
 
-    footer{
+.back{
 
-        font-size:13px;
+    font-size:11px;
 
-    }
+    padding:10px;
+
+}
+
+
+
+.card-btn{
+
+    font-size:10px;
+
+    padding:5px 10px;
+
+}
+
+
+
+.book-btn{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+
+
+.appointment-box h2{
+
+    font-size:24px;
+
+}
+
+
+footer{
+
+    font-size:13px;
+
+}
 
 
 }
