@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SANO Patient Portal</title>
-
+</head>
 
 <style>
 
@@ -34,6 +34,7 @@ body{
     color:#333;
     overflow-x:hidden;
 }
+
 
 
 /* ================= HEADER ================= */
@@ -140,6 +141,7 @@ nav a:hover{
 
 
 
+
 .logout{
 
     background:#dc3545;
@@ -164,6 +166,10 @@ nav a:hover{
 
 
 
+
+/* HAMBURGER */
+
+
 .menu-toggle{
 
     display:none;
@@ -175,6 +181,10 @@ nav a:hover{
     color:#0077b6;
 
 }
+
+
+
+
 
 
 
@@ -220,6 +230,8 @@ nav a:hover{
 
 
 
+
+
 .hero::before{
 
     content:"";
@@ -246,145 +258,209 @@ nav a:hover{
 
 
 
+
 @keyframes floatCircle{
 
-    50%{
 
-        transform:translateY(80px);
+50%{
 
-    }
+    transform:translateY(80px);
 
 }
+
+
+}
+
+
+
 
 
 
 
 .hero-content{
 
+
     max-width:850px;
+
 
     padding:50px;
 
+
     border-radius:35px;
+
 
     background:rgba(255,255,255,.12);
 
+
     backdrop-filter:blur(15px);
+
 
     animation:heroAppear 1.2s ease;
 
+
 }
+
+
+
 
 
 
 @keyframes heroAppear{
 
-    from{
 
-        opacity:0;
+from{
 
-        transform:translateY(50px);
+    opacity:0;
 
-    }
-
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
+    transform:translateY(50px);
 
 }
+
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
 
 
 
 
 .hero h1{
 
+
     font-size:75px;
+
 
     font-weight:800;
 
+
     color:white;
+
 
     text-shadow:
     0 5px 20px rgba(0,0,0,.4);
 
+
     animation:titleGlow 3s infinite;
 
+
 }
+
+
 
 
 
 @keyframes titleGlow{
 
-    50%{
 
-        text-shadow:
-        0 0 25px #90e0ef;
+50%{
 
-    }
+
+    text-shadow:
+    0 0 25px #90e0ef;
+
 
 }
+
+
+}
+
+
+
 
 
 
 .hero span{
 
+
     color:#90e0ef;
 
+
 }
+
+
 
 
 
 .hero-subtitle{
 
+
     margin-top:20px;
+
 
     font-size:25px;
 
+
 }
+
+
 
 
 
 .welcome{
 
+
     display:inline-block;
+
 
     margin-top:20px;
 
+
     padding:12px 30px;
+
 
     background:white;
 
+
     color:#0077b6;
+
 
     border-radius:50px;
 
+
     font-size:20px;
 
+
     font-weight:700;
+
 
     box-shadow:
     0 10px 30px rgba(0,0,0,.2);
 
+
     animation:floatWelcome 3s infinite;
 
+
 }
+
+
+
 
 
 
 @keyframes floatWelcome{
 
-    50%{
 
-        transform:translateY(-8px);
+50%{
 
-    }
+    transform:translateY(-8px);
 
 }
+
+
+}
+
+
+
 
 
 
@@ -393,105 +469,57 @@ nav a:hover{
 
 .book-btn{
 
+
     display:inline-block;
+
 
     margin-top:35px;
 
+
     padding:16px 45px;
+
 
     background:#0077b6;
 
+
     color:white;
+
 
     text-decoration:none;
 
+
     border-radius:50px;
+
 
     font-weight:800;
 
+
     font-size:18px;
 
+
     transition:.3s;
+
 
     box-shadow:
     0 10px 25px rgba(0,119,182,.3);
 
+
 }
+
+
 
 
 
 .book-btn:hover{
 
+
     background:#023e8a;
+
 
     transform:translateY(-5px);
 
-}
-
-
-
-/* ================= VIDEO ================= */
-
-
-.health-video{
-
-    width:500px;
-
-    max-width:100%;
-
-    height:260px;
-
-    margin:35px auto;
-
-    border-radius:30px;
-
-    overflow:hidden;
-
-    position:relative;
-
-    box-shadow:
-    0 25px 60px rgba(0,0,0,.35);
 
 }
-
-
-
-.health-video video{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-}
-
-
-
-.video-overlay{
-
-    position:absolute;
-
-    bottom:0;
-
-    left:0;
-
-    right:0;
-
-    padding:20px;
-
-    background:
-    linear-gradient(
-        transparent,
-        rgba(0,0,0,.75)
-    );
-
-    color:white;
-
-    font-weight:700;
-
-}
- 
 /* ================= SERVICES ================= */
 
 
@@ -505,6 +533,8 @@ nav a:hover{
 
 
 
+
+
 .section-header{
 
     margin-bottom:70px;
@@ -515,229 +545,344 @@ nav a:hover{
 
 
 
+
+
 @keyframes fadeServices{
 
-    from{
 
-        opacity:0;
+from{
 
-        transform:translateY(50px);
+    opacity:0;
 
-    }
-
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
+    transform:translateY(50px);
 
 }
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
 
 
 
 .section-header span{
 
+
     display:inline-block;
+
 
     color:#00b4d8;
 
+
     font-size:15px;
+
 
     font-weight:800;
 
+
     letter-spacing:4px;
+
 
     margin-bottom:15px;
 
+
 }
+
+
+
 
 
 
 .section-header h2{
 
+
     font-size:50px;
+
 
     color:#023e8a;
 
+
     font-weight:800;
 
+
 }
+
+
+
 
 
 
 .section-header h2::after{
 
+
     content:"";
+
 
     display:block;
 
+
     width:120px;
+
 
     height:5px;
 
+
     background:#00b4d8;
+
 
     border-radius:20px;
 
+
     margin:25px auto;
 
+
 }
+
+
+
 
 
 
 .section-header p{
 
+
     max-width:700px;
+
 
     margin:auto;
 
+
     font-size:19px;
+
 
     line-height:1.8;
 
+
     color:#666;
 
+
 }
+
+
+
 
 
 
 .medical-line{
 
+
     margin-top:35px;
+
 
     color:#0077b6;
 
+
     font-size:25px;
+
 
     letter-spacing:5px;
 
+
     animation:heartbeatLine 2s infinite;
 
+
 }
+
+
 
 
 
 @keyframes heartbeatLine{
 
-    50%{
 
-        transform:scale(1.08);
+50%{
 
-    }
+    transform:scale(1.08);
+
+}
+
 
 }
 
 
 
-/* ================= SERVICE CARDS ================= */
+
+
 
 
 /* ================= SERVICE CARDS ================= */
+
 
 
 .cards{
 
+
     display:grid;
+
 
     grid-template-columns:repeat(3,320px);
 
+
     justify-content:center;
+
 
     gap:35px;
 
+
     perspective:1200px;
 
+
 }
+
+
 
 
 
 .card{
 
+
     width:320px;
+
 
     height:280px;
 
+
     cursor:pointer;
 
+
 }
+
+
+
+
 
 
 
 .inner{
 
+
     width:100%;
+
 
     height:100%;
 
+
     position:relative;
 
-    transition:transform .8s cubic-bezier(.4,2,.6,1);
+
+    transition:
+
+    transform .8s cubic-bezier(.4,2,.6,1);
+
 
     transform-style:preserve-3d;
 
+
 }
+
+
 
 
 
 .card:hover .inner{
 
+
     transform:rotateY(180deg);
 
+
 }
+
+
+
+
+
 
 
 
 .front,
 .back{
 
+
     position:absolute;
+
 
     inset:0;
 
+
     display:flex;
+
 
     justify-content:center;
 
+
     align-items:center;
+
 
     flex-direction:column;
 
+
     text-align:center;
+
 
     padding:25px;
 
+
     border-radius:25px;
+
 
     overflow:hidden;
 
+
     backface-visibility:hidden;
+
 
     -webkit-backface-visibility:hidden;
 
+
     box-shadow:
+
     0 15px 40px rgba(0,0,0,.12);
 
+
 }
+
+
+
+
 
 
 
 /* FRONT */
 
 
+
 .front{
+
 
     color:white;
 
+
     font-size:25px;
+
 
     font-weight:700;
 
+
     gap:15px;
 
+
     background:
+
 
     linear-gradient(
         135deg,
@@ -745,124 +890,225 @@ nav a:hover{
         #00b4d8
     );
 
+
 }
+
+
+
 
 
 
 .front::before{
 
+
     content:"";
+
 
     position:absolute;
 
+
     width:180px;
+
 
     height:180px;
 
+
     background:white;
+
 
     opacity:.15;
 
+
     border-radius:50%;
+
 
     top:-70px;
 
+
     right:-50px;
+
 
 }
 
 
 
-/* ICON */
+
 
 
 .service-icon{
 
+
     width:90px;
+
 
     height:90px;
 
+
     border-radius:50%;
+
 
     display:flex;
 
+
     justify-content:center;
+
 
     align-items:center;
 
+
     font-size:50px;
 
+
     background:
+
     rgba(255,255,255,.2);
 
+
     backdrop-filter:blur(5px);
+
 
 }
 
 
 
-/* BACK */
+
+
+
+/* BACK SIDE FIX */
 
 
 .back{
 
+
     background:white;
+
 
     transform:rotateY(180deg);
 
-    font-size:15px;
-
-    line-height:1.5;
 
     color:#444;
 
+
+    font-size:15px;
+
+
+    line-height:1.5;
+
+
+    padding:25px;
+
+
+    
+
+    /* prevents text jumping */
+
     justify-content:space-between;
 
+
 }
+
+
+
+
+
+
+.back::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:white;
+
+
+    z-index:-1;
+
+
+}
+
+
+
 
 
 
 .card-btn{
 
+
+    display:inline-block;
+
+
     padding:8px 20px;
+
 
     background:#0077b6;
 
+
     color:white;
+
 
     text-decoration:none;
 
+
     border-radius:30px;
 
+
     font-size:14px;
+
+
+    margin-top:10px;
+
 
 }
 
 
 
 
+
+.card-btn:hover{
+
+
+    background:#023e8a;
+
+
+}
 /* ================= APPOINTMENT SECTION ================= */
 
 
 .appointment-box{
 
+
     width:80%;
+
 
     margin:100px auto;
 
+
     padding:70px 50px;
+
 
     border-radius:35px;
 
+
     text-align:center;
+
 
     color:white;
 
+
     position:relative;
+
 
     overflow:hidden;
 
+
     background:
+
 
     linear-gradient(
         135deg,
@@ -876,220 +1122,600 @@ nav a:hover{
     0 25px 60px rgba(0,119,182,.35);
 
 
-    animation:
-    appointmentFloat 5s infinite;
+    animation:appointmentFloat 5s infinite;
+
 
 }
+
+
+
+
 
 
 
 @keyframes appointmentFloat{
 
-    50%{
 
-        transform:translateY(-12px);
+50%{
 
-    }
+
+    transform:translateY(-12px);
+
 
 }
+
+
+}
+
+
+
 
 
 
 .appointment-box::before{
 
+
     content:"";
+
 
     position:absolute;
 
+
     width:300px;
+
 
     height:300px;
 
+
     background:white;
+
 
     opacity:.12;
 
+
     border-radius:50%;
+
 
     top:-120px;
 
+
     left:-100px;
 
+
 }
+
+
+
 
 
 
 .appointment-box::after{
 
+
     content:"";
+
 
     position:absolute;
 
+
     width:250px;
+
 
     height:250px;
 
+
     background:#90e0ef;
+
 
     opacity:.25;
 
+
     border-radius:50%;
+
 
     right:-80px;
 
+
     bottom:-100px;
 
+
 }
+
+
+
 
 
 
 .appointment-box h2{
 
+
     position:relative;
+
 
     z-index:2;
 
+
     font-size:42px;
 
+
 }
+
+
+
+
 
 
 
 .appointment-box h2::before{
 
+
     content:"❤️";
+
 
     display:block;
 
+
     font-size:55px;
+
 
     margin-bottom:15px;
 
+
     animation:heartBeat 1.2s infinite;
 
+
 }
+
+
+
+
 
 
 
 @keyframes heartBeat{
 
-    0%,100%{
 
-        transform:scale(1);
+0%,100%{
 
-    }
 
-    30%{
+transform:scale(1);
 
-        transform:scale(1.25);
-
-    }
-
-    50%{
-
-        transform:scale(.95);
-
-    }
 
 }
+
+
+
+30%{
+
+
+transform:scale(1.25);
+
+
+}
+
+
+
+50%{
+
+
+transform:scale(.95);
+
+
+}
+
+
+}
+
+
+
+
 
 
 
 .appointment-box p{
 
+
     position:relative;
+
 
     z-index:2;
 
+
     margin-top:20px;
+
 
     font-size:20px;
 
+
 }
+
+
+
 
 
 
 .appointment-box .book-btn{
 
+
     position:relative;
+
 
     z-index:2;
 
+
     background:white;
+
 
     color:#0077b6;
 
+
 }
+
+
+
+
 
 
 
 .appointment-box .book-btn:hover{
 
+
     background:#023e8a;
+
 
     color:white;
 
-}
-
-
-
-/* ================= BACK HOME ================= */
-
-
-.back-home{
-
-    display:block;
-
-    text-align:center;
-
-    margin-top:20px;
-
-    color:#0077b6;
-
-    text-decoration:none;
-
-    font-weight:600;
 
 }
 
 
 
-.back-home:hover{
 
-    text-decoration:underline;
 
-}
+
+
 
 /* ================= FOOTER ================= */
 
 
+
 footer{
+
 
     background:#001d3d;
 
+
     color:white;
+
 
     text-align:center;
 
+
     padding:25px;
 
+
     font-size:15px;
+
 
 }
 
 
 
-/* ================= TABLET + MOBILE ================= */
+
+
+
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+
 
 
 @media(max-width:900px){
 
 
-.cards{
 
-    grid-template-columns:repeat(2,1fr);
+/* HEADER */
+
+
+
+header{
+
+
+    padding:18px 5%;
+
+
+}
+
+
+
+
+.logo{
+
+
+    font-size:20px;
+
+
+}
+
+
+
+
+.menu-toggle{
+
+
+    display:block;
+
+
+}
+
+
+
+
+
+/* MOBILE NAVBAR */
+
+
+nav{
+
+
+    position:absolute;
+
+
+    top:75px;
+
+
+    left:5%;
+
+
+    width:90%;
+
+
+    background:white;
+
+
+    border-radius:20px;
+
+
+    padding:25px;
+
+
+    display:none;
+
+
+    flex-direction:column;
+
+
+    align-items:center;
+
 
     gap:20px;
+
+
+    box-shadow:
+
+
+    0 20px 40px rgba(0,0,0,.15);
+
+
+}
+
+
+
+
+
+
+nav.active{
+
+
+    display:flex;
+
+
+}
+
+
+
+
+
+nav a{
+
+
+    width:100%;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+.logout{
+
+
+    width:100%;
+
+
+}
+
+
+
+
+
+
+
+
+/* HERO */
+
+
+.hero{
+
+
+    min-height:80vh;
+
+
+    padding:30px 5%;
+
+
+}
+
+
+
+.hero-content{
+
+
+    width:100%;
+
+
+    padding:30px 20px;
+
+
+}
+
+
+
+
+.hero h1{
+
+
+    font-size:42px;
+
+
+}
+
+
+
+.hero-subtitle{
+
+
+    font-size:18px;
+
+
+}
+
+
+
+.welcome{
+
+
+    font-size:16px;
+
+
+    padding:10px 20px;
+
+
+}
+
+
+
+
+
+.book-btn{
+
+
+    padding:15px 30px;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+
+
+
+
+
+/* SERVICES */
+
+
+.services{
+
+
+    padding:60px 5%;
+
+
+}
+
+
+
+
+.section-header h2{
+
+
+    font-size:32px;
+
+
+}
+
+
+
+
+.section-header p{
+
+
+    font-size:15px;
+
+
+}
+
+
+
+
+
+
+
+
+/* APPOINTMENT */
+
+
+.appointment-box{
+
+
+    width:90%;
+
+
+    padding:45px 20px;
+
+
+    margin:60px auto;
+
+
+}
+
+
+
+
+
+.appointment-box h2{
+
+
+    font-size:30px;
+
+
+}
+
+
+
+
+.appointment-box p{
+
+
+    font-size:16px;
+
+
+}
+/* ================= MOBILE CARDS ================= */
+
+
+.cards{
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:12px;
 
 }
 
@@ -1099,7 +1725,7 @@ footer{
 
     width:100%;
 
-    height:200px;
+    height:170px;
 
 }
 
@@ -1107,7 +1733,9 @@ footer{
 
 .front{
 
-    font-size:17px;
+    font-size:13px;
+
+    padding:10px;
 
 }
 
@@ -1115,11 +1743,11 @@ footer{
 
 .service-icon{
 
-    width:60px;
+    width:45px;
 
-    height:60px;
+    height:45px;
 
-    font-size:32px;
+    font-size:24px;
 
 }
 
@@ -1127,9 +1755,11 @@ footer{
 
 .back{
 
-    font-size:12px;
+    font-size:10px;
 
-    padding:12px;
+    padding:10px;
+
+    line-height:1.3;
 
 }
 
@@ -1137,14 +1767,15 @@ footer{
 
 .card-btn{
 
-    padding:6px 12px;
+    font-size:9px;
 
-    font-size:11px;
+    padding:5px 8px;
 
 }
 
 
-/* disable desktop hover */
+/* disable hover on phone */
+
 
 .card:hover .inner{
 
@@ -1155,17 +1786,15 @@ footer{
 
 /* tap flip */
 
+
 .card.active .inner{
 
     transform:rotateY(180deg);
 
 }
 
-
 }
-
-
-/* ================= SMALL PHONES ================= */
+/* SMALL PHONES */
 
 @media(max-width:480px){
 
@@ -1177,11 +1806,13 @@ footer{
 }
 
 
+
 .hero h1{
 
     font-size:34px;
 
 }
+
 
 
 .hero-subtitle{
@@ -1191,11 +1822,16 @@ footer{
 }
 
 
+
+
 .cards{
 
-    grid-template-columns:repeat(2,1fr);
 
-    gap:12px;
+    grid-template-columns:repeat(3,1fr);
+
+
+    gap:10px;
+
 
 }
 
@@ -1203,17 +1839,20 @@ footer{
 
 .card{
 
-    height:175px;
+
+    height:165px;
+
 
 }
 
 
 
+
 .front{
 
-    font-size:14px;
 
-    padding:10px;
+    font-size:12px;
+
 
 }
 
@@ -1221,11 +1860,15 @@ footer{
 
 .service-icon{
 
-    width:50px;
 
-    height:50px;
+    width:42px;
 
-    font-size:25px;
+
+    height:42px;
+
+
+    font-size:22px;
+
 
 }
 
@@ -1233,9 +1876,9 @@ footer{
 
 .back{
 
-    font-size:11px;
 
-    padding:10px;
+    font-size:9px;
+
 
 }
 
@@ -1243,98 +1886,89 @@ footer{
 
 .card-btn{
 
-    font-size:10px;
 
-    padding:5px 10px;
-
-}
+    font-size:8px;
 
 
+    padding:5px;
 
-.book-btn{
-
-    width:100%;
-
-    text-align:center;
 
 }
+
 
 
 
 .appointment-box h2{
 
+
     font-size:24px;
 
+
 }
+
 
 
 footer{
 
+
     font-size:13px;
 
-}
-
 
 }
 
 
-
-/* ================= REDUCED MOTION ================= */
-
-
-@media(prefers-reduced-motion:reduce){
-
-
-    *{
-
-        animation:none !important;
-
-        transition:none !important;
-
-    }
-
-
-}
-@media(max-width:480px){
-
-.cards{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-
-.card{
-
-    height:170px;
-
-}
 
 }
 </style>
 
+
 </head>
+
 <body>
+
+
+<!-- ================= HEADER ================= -->
 
 <header>
 
+
+
 <div class="logo">
-    🏥 SANO Health Care
+
+🏥 SANO Health Care
+
 </div>
+
+
+
 <div class="menu-toggle" id="menu-toggle">
+
 ☰
+
 </div>
+
+
+
 
 <nav>
 
+
 <a href="{% url 'home' %}">
-    Dashboard
+
+Dashboard
+
 </a>
+
 
 
 <a href="{% url 'my_appointments' %}">
-    My Appointments
+
+My Appointments
+
 </a>
+
+
+
 
 <a href="{% url 'patient_notifications' %}">
 
@@ -1344,62 +1978,120 @@ footer{
 
 
 
+
+
 <a href="{% url 'logout' %}" class="logout">
-    Logout
+
+Logout
+
 </a>
+
 
 
 </nav>
 
 
 
-
 </header>
+
+
+
+
+
+
+<!-- ================= HERO ================= -->
+
+
 <section class="hero">
+
 
 <div class="hero-content">
 
+
 <h1>
+
 Welcome to <span>SANO</span>
+
 </h1>
 
+
+
 <p class="hero-subtitle">
+
 Your personal healthcare portal
+
 </p>
 
+
+
+
 <div class="welcome">
+
 ❤️ Hello {{request.user.username}}
+
 </div>
+
+
+
 
 <a href="{% url 'appointment' %}" class="book-btn">
+
 Book Your Appointment
+
 </a>
+
+
 
 </div>
 
+
 </section>
+
+
+
+
+
+
+
+
+
+<!-- ================= SERVICES ================= -->
+
 
 
 <section class="services">
 
 
+
 <div class="section-header">
 
 
+
 <span>
+
 OUR SERVICES
+
 </span>
 
 
+
 <h2>
+
 Medical Care Designed Around You
+
 </h2>
 
 
+
+
 <p>
+
 Professional healthcare solutions delivered with compassion,
 experience, and modern medical support.
+
 </p>
+
+
 
 
 <div class="medical-line">
@@ -1409,171 +2101,351 @@ experience, and modern medical support.
 </div>
 
 
+
 </div>
+
+
+
+
 
 
 
 <div class="cards">
 
-<!-- Senior Home Care -->
+
+
+
+
+
+
+<!-- CARD 1 -->
+
+
 <div class="card">
+
 <div class="inner">
+
+
 
 <div class="front">
 
+
 <div class="service-icon">
+
 🏡
+
 </div>
+
 
 Senior Home Care
 
+
 </div>
 
+
+
+
+
 <div class="back">
+
+
+<p>
 
 Compassionate home-based care for elderly patients,
 including daily assistance, medication support,
 mobility care and comfort at home.
 
+</p>
+
+
+
 <a href="{% url 'appointment' %}" class="card-btn">
-Book Appointment
+
+Book
+
 </a>
 
+
+
+</div>
+
+
 </div>
 
 </div>
-</div>
 
 
 
-<!-- Medical Consultation -->
+
+
+
+
+
+<!-- CARD 2 -->
+
+
 <div class="card">
+
 <div class="inner">
+
+
 
 <div class="front">
 
+
 <div class="service-icon">
+
 🩺
+
 </div>
+
 
 Medical Consultation
 
+
 </div>
 
+
+
+
+
 <div class="back">
+
+
+<p>
 
 Professional medical consultation,
 health assessment, diagnosis guidance
 and personalized treatment advice.
 
+</p>
+
+
+
 <a href="{% url 'appointment' %}" class="card-btn">
-Book Appointment
+
+Book
+
 </a>
 
+
+
+</div>
+
+
 </div>
 
 </div>
-</div>
 
 
 
 
-<!-- Tube Changes -->
+
+
+
+
+
+<!-- CARD 3 -->
+
+
 <div class="card">
+
 <div class="inner">
+
+
 
 <div class="front">
 
+
 <div class="service-icon">
+
 💉
+
 </div>
+
 
 Tube Changes
 
+
 </div>
+
+
+
+
 
 <div class="back">
 
+
+<p>
+
 Safe replacement and management of
-NGT (Nasogastric Tube) and urinary
-catheter care by trained professionals.
+NGT and urinary catheter care
+by trained professionals.
+
+</p>
+
+
 
 <a href="{% url 'appointment' %}" class="card-btn">
-Book Appointment
+
+Book
+
 </a>
 
+
+
+</div>
+
+
 </div>
 
 </div>
-</div>
 
 
-<!-- Wound Care -->
+
+
+
+
+
+
+
+
+<!-- CARD 4 -->
+
+
 <div class="card">
+
 <div class="inner">
+
+
 
 <div class="front">
 
+
 <div class="service-icon">
+
 🩹
+
 </div>
+
 
 Wound Care
 
+
 </div>
 
+
+
+
+
 <div class="back">
+
+
+<p>
 
 Professional wound cleaning,
 dressing changes, monitoring,
 and healing support.
 
+</p>
+
+
+
 <a href="{% url 'appointment' %}" class="card-btn">
-Book Appointment
+
+Book
+
 </a>
 
+
+
+</div>
+
+
 </div>
 
 </div>
-</div>
 
-<!-- Chronic Disease Follow Up -->
+
+
+
+
+
+
+
+
+
+<!-- CARD 5 -->
+
+
 <div class="card">
+
 <div class="inner">
+
+
 
 <div class="front">
 
+
 <div class="service-icon">
+
 📋
-</div>
-
-Chronic Disease Follow Up
 
 </div>
+
+
+Chronic Follow Up
+
+
+</div>
+
+
+
+
 
 <div class="back">
 
+
+<p>
+
 Continuous monitoring and follow-up
-for diabetes, hypertension, asthma,
-and other long-term conditions.
+for diabetes, hypertension,
+asthma and other conditions.
+
+</p>
+
+
 
 <a href="{% url 'appointment' %}" class="card-btn">
-Book Appointment
+
+Book
+
 </a>
 
-</div>
-
-</div>
-</div>
 
 
 </div>
 
+
 </div>
+
+</div>
+
+
+
+
+</div>
+
 
 </section>
 
+
+<!-- ================= APPOINTMENT ================= -->
+
+
+
 <section class="appointment-box">
+
 
 
 <h2>
@@ -1581,6 +2453,8 @@ Book Appointment
 Ready to take care of your health?
 
 </h2>
+
+
 
 
 <p>
@@ -1591,6 +2465,7 @@ Schedule your appointment with SANO Health Care today.
 
 
 
+
 <a href="{% url 'appointment' %}" class="book-btn">
 
 Book Your Appointment
@@ -1598,123 +2473,226 @@ Book Your Appointment
 </a>
 
 
+
+
 </section>
+
+
+
+
+
+
+
+
+
+<!-- ================= CONTACT ================= -->
+
+
+
 <section class="appointment-box" id="contact">
 
 
 <h2>
+
 Contact SANO Health Care
+
 </h2>
 
 
+
 <p>
+
 Need help? Our healthcare team is ready to assist you.
+
 </p>
+
+
 
 
 <br>
 
 
+
 <p>
+
 📍 Addis Ababa, Ethiopia
+
 </p>
 
 
+
 <p>
+
 📞 +251 23520623
+
 </p>
+
 
 
 <p>
+
 ✉ support@eyuealeskeatnaf.com
+
 </p>
+
 
 
 </section>
- 
+
+
+
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
 
 <footer>
 
+
 © 2026 SANO Health Care |
+
 Professional Healthcare Services
 
+
 </footer>
+
+
 <script>
 
+
+// ================= HAMBURGER =================
+
+
+
 const menuToggle=document.getElementById("menu-toggle");
+
 const nav=document.querySelector("nav");
+
+
 
 
 menuToggle.onclick=function(){
 
-    nav.classList.toggle("active");
 
 
-    if(nav.classList.contains("active")){
+nav.classList.toggle("active");
 
-        menuToggle.innerHTML="✕";
 
-    }else{
 
-        menuToggle.innerHTML="☰";
+if(nav.classList.contains("active")){
 
-    }
+
+menuToggle.innerHTML="✕";
+
 
 }
 
+else{
+
+
+menuToggle.innerHTML="☰";
+
+
+}
+
+
+};
+
+
+
+
+
+
+
+// close menu after clicking link
 
 
 document.querySelectorAll("nav a").forEach(link=>{
 
+
 link.onclick=function(){
+
 
 nav.classList.remove("active");
 
+
 menuToggle.innerHTML="☰";
 
+
 }
+
 
 });
 
 
 
-// mobile card flip
+
+
+
+
+
+
+// ================= MOBILE CARD FLIP =================
+
+
+
 
 document.querySelectorAll(".card").forEach(card=>{
+
 
 
 card.addEventListener("click",()=>{
 
 
+
 document.querySelectorAll(".card").forEach(c=>{
+
 
 if(c!==card){
 
+
 c.classList.remove("active");
+
 
 }
 
+
 });
+
+
 
 
 card.classList.toggle("active");
 
 
+
+
+
 setTimeout(()=>{
 
+
 card.classList.remove("active");
+
 
 },5000);
 
 
 
+
 });
 
 
 });
+
 
 
 </script>
+
 
 
 </body>
