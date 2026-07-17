@@ -1336,110 +1336,55 @@ footer{
 }
 
 
-/* ================= PROFESSIONAL MOBILE ================= */
-
 @media(max-width:900px){
-
 
 /* ================= HEADER ================= */
 
 header{
-
     position:fixed;
     top:0;
     left:0;
-
     width:100%;
-    height:75px;
+    height:70px;
 
-    padding:0 5%;
-
-    background:white;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+    padding:0 20px;
 
     z-index:9999;
-
-    box-shadow:0 5px 25px rgba(0,0,0,.12);
-
 }
 
 
 body{
-
-    padding-top:75px;
-
+    padding-top:70px;
 }
 
 
 .logo{
-
-    font-size:22px;
-
+    font-size:20px;
 }
 
 
+/* hide hamburger */
 
 .menu-toggle{
-
-    display:block;
-
-    font-size:30px;
-
+    display:none;
 }
-
 
 
 nav{
-
-    position:absolute;
-
-    top:75px;
-    left:5%;
-
-    width:90%;
-
-    display:none;
-
-    flex-direction:column;
-
-    gap:18px;
-
-    padding:25px;
-
-    background:white;
-
-    border-radius:20px;
-
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
-
-}
-
-
-nav.active{
-
     display:flex;
-
+    align-items:center;
 }
 
 
 nav a{
-
-    margin:0;
-
-    text-align:center;
-
+    margin-left:15px;
+    font-size:12px;
 }
 
 
-
 .btn{
-
-    width:100%;
-    margin:0;
-
+    padding:8px 14px;
+    font-size:12px;
 }
 
 
@@ -1449,22 +1394,21 @@ nav a{
 
 .hero{
 
-    min-height:auto;
+    min-height:90vh;
 
-    padding:45px 6% 70px;
+    flex-direction:row;
 
-    flex-direction:column-reverse;
+    padding:50px 5%;
 
-    text-align:center;
-
-    gap:35px;
+    gap:20px;
 
 }
 
 
+
 .hero-text{
 
-    width:100%;
+    width:50%;
 
 }
 
@@ -1472,27 +1416,24 @@ nav a{
 
 .hero h1{
 
-    font-size:38px;
+    font-size:35px;
 
 }
-
 
 
 .hero p{
 
-    font-size:16px;
+    font-size:14px;
 
 }
+
 
 
 .hero img{
 
-    width:90%;
-
-    max-width:330px;
+    width:45%;
 
 }
-
 
 
 
@@ -1509,7 +1450,7 @@ nav a{
 
 .section-title{
 
-    font-size:32px;
+    font-size:30px;
 
 }
 
@@ -1519,23 +1460,11 @@ nav a{
 
     display:flex;
 
-    overflow-x:auto;
-
     flex-wrap:nowrap;
 
-    justify-content:flex-start;
+    justify-content:center;
 
-    gap:20px;
-
-    padding:15px 5px 25px;
-
-}
-
-
-
-.cards::-webkit-scrollbar{
-
-    display:none;
+    gap:15px;
 
 }
 
@@ -1543,9 +1472,9 @@ nav a{
 
 .flip-card{
 
-    flex:0 0 230px;
+    width:180px;
 
-    height:220px;
+    height:200px;
 
 }
 
@@ -1554,9 +1483,7 @@ nav a{
 .flip-front,
 .flip-back{
 
-    border-radius:20px;
-
-    padding:22px;
+    padding:15px;
 
 }
 
@@ -1564,11 +1491,10 @@ nav a{
 
 .icon{
 
-    width:65px;
+    width:55px;
+    height:55px;
 
-    height:65px;
-
-    font-size:32px;
+    font-size:28px;
 
 }
 
@@ -1576,22 +1502,14 @@ nav a{
 
 .flip-front h3{
 
-    font-size:22px;
+    font-size:17px;
 
 }
-
 
 
 .flip-front p{
 
-    font-size:14px;
-
-}
-
-
-.flip-back{
-
-    font-size:13px;
+    font-size:12px;
 
 }
 
@@ -1608,37 +1526,13 @@ nav a{
 
 
 
-.stats h2{
-
-    font-size:30px;
-
-}
-
-
-
-.stats-subtitle{
-
-    font-size:15px;
-
-}
-
-
-
 .stats-container{
 
-    display:flex;
+    display:grid;
 
-    overflow-x:auto;
+    grid-template-columns:repeat(4,1fr);
 
-    gap:18px;
-
-}
-
-
-
-.stats-container::-webkit-scrollbar{
-
-    display:none;
+    gap:15px;
 
 }
 
@@ -1646,11 +1540,7 @@ nav a{
 
 .stat-card{
 
-    flex:0 0 180px;
-
-    padding:25px 15px;
-
-    animation:none;
+    padding:20px 10px;
 
 }
 
@@ -1658,7 +1548,7 @@ nav a{
 
 .stat-card h3{
 
-    font-size:36px;
+    font-size:32px;
 
 }
 
@@ -1666,16 +1556,18 @@ nav a{
 
 .stat-icon{
 
-    font-size:35px;
+    font-size:30px;
 
 }
+
 
 
 .stat-card span{
 
-    font-size:14px;
+    font-size:12px;
 
 }
+
 
 
 
@@ -1685,7 +1577,7 @@ nav a{
 
 .about{
 
-    padding:70px 5%;
+    padding:80px 5%;
 
 }
 
@@ -1693,9 +1585,25 @@ nav a{
 
 .about-content{
 
-    flex-direction:column;
+    flex-direction:row;
 
-    text-align:center;
+    gap:30px;
+
+}
+
+
+
+.about-text{
+
+    width:50%;
+
+}
+
+
+
+.about-image{
+
+    width:50%;
 
 }
 
@@ -1703,7 +1611,7 @@ nav a{
 
 .about h2{
 
-    font-size:34px;
+    font-size:30px;
 
 }
 
@@ -1711,7 +1619,7 @@ nav a{
 
 .about p{
 
-    font-size:16px;
+    font-size:14px;
 
 }
 
@@ -1719,19 +1627,7 @@ nav a{
 
 .features{
 
-    display:flex;
-
-    overflow-x:auto;
-
-    gap:15px;
-
-}
-
-
-
-.features::-webkit-scrollbar{
-
-    display:none;
+    grid-template-columns:repeat(2,1fr);
 
 }
 
@@ -1739,21 +1635,22 @@ nav a{
 
 .feature{
 
-    flex:0 0 190px;
+    font-size:12px;
 
-    padding:18px;
-
-    font-size:14px;
+    padding:12px;
 
 }
 
 
 
+/* medical animation */
+
+
 .medical-animation{
 
-    width:300px;
+    width:250px;
 
-    height:300px;
+    height:250px;
 
 }
 
@@ -1761,11 +1658,11 @@ nav a{
 
 .doctor-circle{
 
-    width:190px;
+    width:170px;
 
-    height:190px;
+    height:170px;
 
-    font-size:75px;
+    font-size:70px;
 
 }
 
@@ -1774,52 +1671,14 @@ nav a{
 /* ================= CONTACT ================= */
 
 
-.contact{
+.contact-info{
 
-    padding:60px 5%;
+    grid-template-columns:repeat(2,1fr);
 
 }
-
 
 
 .company-card{
-
-    padding:25px;
-
-}
-
-
-
-.contact-info{
-
-    display:grid;
-
-    grid-template-columns:1fr;
-
-    gap:15px;
-
-}
-
-
-
-.contact-info div{
-
-    padding:15px;
-
-    background:#f8fcff;
-
-    border-radius:15px;
-
-}
-
-
-
-/* FOOTER */
-
-
-footer{
-
-    font-size:13px;
 
     padding:20px;
 
@@ -1827,6 +1686,8 @@ footer{
 
 
 }
+
+
 
 
 
