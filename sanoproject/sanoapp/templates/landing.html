@@ -1412,6 +1412,10 @@ footer{
 }
 
 
+.flip-card.active .flip-inner{
+    transform:rotateY(180deg);
+}
+
 
 /* Mobile dropdown */
 
@@ -1638,9 +1642,7 @@ nav a{
     -webkit-tap-highlight-color:transparent;
 }
 
-.flip-card:hover .flip-inner{
-    transform:none;
-}
+
 /* ================= TRUSTED HEALTHCARE ================= */
 
 
@@ -1739,26 +1741,25 @@ nav a{
 
 .about-content{
 
-    flex-direction:row;
+    flex-direction:column;
 
     gap:25px;
 
 }
+.about-text,
+.about-image{
 
-
-
-.about-text{
-
-    width:50%;
+    width:100%;
 
 }
+
+
 
 
 
 .about-image{
 
-    width:50%;
-
+    
     display:flex;
 
     justify-content:center;
@@ -1817,6 +1818,7 @@ nav a{
 
     margin:auto;
     overflow:visible;
+    transform:scale(.85);
 
 }
 
@@ -1848,7 +1850,7 @@ nav a{
 
 .card1{
 
-    right:0;
+    right:5px;
 
 }
 
@@ -1856,14 +1858,15 @@ nav a{
 
 .card2{
 
-    left:0;
+    left:5px;
 
 }
 
 
 
 .card3{
-    right:20px;
+    right:10px;
+    top: 120px;
 }
 
 
@@ -2352,8 +2355,9 @@ with modern healthcare solutions.
             <div class="stat-icon">😊</div>
             <h3 class="counter" data-target="98">0</h3>
             <span>Patient Satisfaction %</span>
+
         </div>
-        
+        </div>
 
     <div class="ecg-animation">
 
@@ -2614,37 +2618,18 @@ const cards = document.querySelectorAll(".flip-card");
 
 cards.forEach(card => {
 
-    let timer;
-
-    card.addEventListener("touchstart", function(e){
-
-        e.preventDefault();
+    card.addEventListener("click", () => {
 
         cards.forEach(other => {
-
             if(other !== card){
                 other.classList.remove("active");
             }
-
         });
 
         card.classList.toggle("active");
 
-        clearTimeout(timer);
-
-        if(card.classList.contains("active")){
-
-            timer=setTimeout(()=>{
-
-                card.classList.remove("active");
-
-            },5000);
-
-        }
-
     });
 
 });
-
 </script>
 </body>
