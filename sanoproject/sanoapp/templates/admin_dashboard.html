@@ -924,78 +924,126 @@ td:last-child{
 
 @media (max-width:768px){
 
-    .sidebar{
-        position:relative;
-        width:100%;
-        height:auto;
-        padding:20px;
-    }
-
-    .main{
-        margin:0;
-        padding:15px;
-    }
-
-    .header{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:15px;
-    }
-
-    .header h1{
-        font-size:26px;
-    }
-
-    .admin-actions{
-        width:100%;
-        justify-content:space-between;
-    }
-
-    .cards{
-        grid-template-columns:1fr;
-    }
-
-    .table-box{
-        padding:10px;
-        overflow-x:auto;
-        -webkit-overflow-scrolling:touch;
-    }
-
-    table{
-        min-width:900px;
-        border-spacing:0 8px;
-    }
-
-    th,
-    td{
-        padding:12px;
-        white-space:nowrap;
-        font-size:13px;
-    }
-
-    .status{
-        font-size:12px;
-        padding:6px 12px;
-    }
-
-    td:last-child{
-        min-width:220px;
-    }
-
-    .action{
-        display:inline-block;
-        margin:2px;
-        padding:8px 10px;
-        font-size:11px;
-    }
-
-    #notificationBox{
-        width:95vw;
-        right:-10px;
-    }
-
+body{
+    overflow-x:hidden;
 }
 
+.sidebar{
+    position:relative;
+    width:100%;
+    height:auto;
+    padding:20px;
+}
+
+.main{
+    margin:0;
+    padding:15px;
+}
+
+.header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.header h1{
+    font-size:28px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+/* Hide table header */
+thead{
+    display:none;
+}
+
+.table-box{
+    padding:15px;
+    overflow:visible;
+    box-shadow:none;
+    background:transparent;
+}
+
+table{
+    width:100%;
+    border-spacing:0;
+    background:transparent;
+}
+
+tbody,
+tr,
+td{
+    display:block;
+    width:100%;
+}
+
+tbody tr{
+    background:#fff;
+    border-radius:18px;
+    padding:16px;
+    margin-bottom:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+td{
+    border:none;
+    padding:10px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:10px;
+    font-size:14px;
+}
+
+td::before{
+    font-weight:700;
+    color:#023e8a;
+    min-width:90px;
+}
+
+td:nth-child(1)::before{content:"Patient";}
+td:nth-child(2)::before{content:"Phone";}
+td:nth-child(3)::before{content:"Service";}
+td:nth-child(4)::before{content:"Date";}
+td:nth-child(5)::before{content:"Time";}
+td:nth-child(6)::before{content:"Status";}
+td:nth-child(7)::before{content:"Actions";}
+
+.status{
+    font-size:12px;
+    padding:6px 12px;
+}
+
+td:last-child{
+    display:block;
+}
+
+.action{
+    display:block;
+    width:100%;
+    margin:6px 0;
+    text-align:center;
+    padding:10px;
+    font-size:13px;
+}
+
+.notification-wrapper{
+    width:100%;
+}
+
+#notificationBox{
+    width:100%;
+    left:0;
+    right:auto;
+}
+
+.admin-box{
+    width:100%;
+    text-align:center;
+}
+}
 
 
 </style>
