@@ -920,79 +920,81 @@ td:last-child{
 
 
 
-@media(max-width:900px){
+/* ================= MOBILE ================= */
 
+@media (max-width:768px){
 
-.sidebar{
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+        padding:20px;
+    }
 
-    position:relative;
+    .main{
+        margin:0;
+        padding:15px;
+    }
 
-    width:100%;
+    .header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
 
-    height:auto;
+    .header h1{
+        font-size:26px;
+    }
+
+    .admin-actions{
+        width:100%;
+        justify-content:space-between;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .table-box{
+        padding:10px;
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    table{
+        min-width:900px;
+        border-spacing:0 8px;
+    }
+
+    th,
+    td{
+        padding:12px;
+        white-space:nowrap;
+        font-size:13px;
+    }
+
+    .status{
+        font-size:12px;
+        padding:6px 12px;
+    }
+
+    td:last-child{
+        min-width:220px;
+    }
+
+    .action{
+        display:inline-block;
+        margin:2px;
+        padding:8px 10px;
+        font-size:11px;
+    }
+
+    #notificationBox{
+        width:95vw;
+        right:-10px;
+    }
 
 }
-
-
-
-.main{
-
-    margin:0;
-
-    padding:20px;
-
-}
-
-
-
-.header{
-
-    flex-direction:column;
-
-    align-items:flex-start;
-
-    gap:20px;
-
-}
-
-
-
-.cards{
-
-    grid-template-columns:1fr;
-
-}
-
-
-
-.table-box{
-
-    padding:15px;
-
-}
-
-
-
-table{
-
-    font-size:12px;
-
-}
-
-
-
-.action{
-
-    padding:7px 10px;
-
-    font-size:11px;
-
-}
-
-
-
-}
-
 
 
 
