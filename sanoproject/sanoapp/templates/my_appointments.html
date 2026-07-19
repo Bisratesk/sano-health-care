@@ -522,65 +522,106 @@ margin-bottom:15px;
 
 }
 
+/* ================= MOBILE ================= */
 
-
-/* MOBILE */
-
-
-@media(max-width:700px){
-
+@media (max-width:700px){
 
 body{
-
-padding:20px;
-
+    padding:15px;
 }
-
 
 .container{
-
-padding:25px;
-
+    width:100%;
+    padding:20px 15px;
 }
-
 
 .header h1{
-
-font-size:32px;
-
+    font-size:28px;
 }
 
-
-th,td{
-
-padding:12px;
-
-font-size:14px;
-
+.header p{
+    font-size:15px;
 }
 
+.home-btn{
+    width:100%;
+    text-align:center;
+    padding:14px;
+}
+
+/* Hide table header */
+thead{
+    display:none;
+}
+
+table{
+    box-shadow:none;
+    background:transparent;
+}
+
+tbody,
+tr,
+td{
+    display:block;
+    width:100%;
+}
+
+tr{
+    background:#fff;
+    margin-bottom:18px;
+    border-radius:18px;
+    padding:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+td{
+    border:none;
+    padding:10px 0;
+    font-size:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:10px;
+}
+
+td::before{
+    font-weight:700;
+    color:#023e8a;
+    min-width:75px;
+}
+
+/* Labels */
+td:nth-child(1)::before{
+    content:"Service";
+}
+
+td:nth-child(2)::before{
+    content:"Date";
+}
+
+td:nth-child(3)::before{
+    content:"Time";
+}
+
+td:nth-child(4)::before{
+    content:"Status";
+}
 
 .status{
-
-font-size:12px;
-
-padding:8px 12px;
-
+    font-size:12px;
+    padding:8px 12px;
+    text-align:center;
 }
 
-
-
+.empty{
+    padding:30px 15px;
+    font-size:18px;
 }
-
-
-
-
+}
 
 </style>
 
-
 </head>
-
 
 <body>
 
