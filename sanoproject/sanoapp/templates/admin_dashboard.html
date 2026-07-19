@@ -937,7 +937,8 @@ body{
 
 .main{
     margin:0;
-    padding:15px;
+    padding:12px;
+    width:100%;
 }
 
 .header{
@@ -1042,6 +1043,53 @@ td:last-child{
 .admin-box{
     width:100%;
     text-align:center;
+}
+.admin-actions{
+    width:100%;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.notification-wrapper{
+    width:100%;
+}
+
+.bell{
+    width:50px;
+    height:50px;
+}
+
+#notificationBox{
+    width:100%;
+    max-width:100%;
+    left:0;
+    right:0;
+}
+
+.table-box > div:first-child{
+    flex-direction:column;
+    align-items:stretch;
+    gap:12px;
+}
+
+.table-box > div:first-child a,
+.table-box > div:first-child button{
+    width:100%;
+    text-align:center;
+}
+
+td{
+    flex-wrap:wrap;
+    word-break:break-word;
+}
+
+body,
+html{
+    overflow-x:hidden;
+}
+
+*{
+    max-width:100%;
 }
 }
 
